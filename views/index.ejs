@@ -20,7 +20,9 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
 
-        <script src="/magic.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+       
        <!--  privacy policy styling -->
       <!--  <script src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/Contents%2Fjs%2Fjquery.js?alt=media&token=e54d0124-94f3-46c8-9d93-f0259d31aec6"></script>
     <script src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/Contents%2Fjs%2Fkit_fontawesome.js?alt=media&token=3d99d3c1-9d5d-4058-958e-79c75bd67ff0"></script>
@@ -387,8 +389,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-9">
-                <form class="row contact_form"  id="contactForm" novalidate="novalidate">
+            <div id="here" class="col-lg-9">
+                <form class="row contact_form" method="POST" action="/"  id="contactForm" novalidate="novalidate">
                     <div class="col-md-6">
                         <div class="form-group">
                             <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
@@ -406,7 +408,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 text-right">
-                        <button type="submit" value="submit" class="btn submit_btn">Send Message</button>
+                        <button type="submit" id="submitButton" value="submit" class="btn submit_btn">Send Message</button>
                     </div>
                 </form>
             </div>
@@ -764,8 +766,10 @@
         <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
         <script src="vendors/counter-up/jquery.counterup.js"></script>
         <script src="js/mail-script.js"></script>
+        <script src="sweetalert/sweetalert.min.js"></script>
         <script src="vendors/popup/jquery.magnific-popup.min.js"></script>
         <script src="js/theme.js"></script>
+        <script src="/magic.js"></script>
 
        
     </body>

@@ -4,7 +4,7 @@
   "description": "a test cerv project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server"
   },
   "author": "Toyosi",
   "license": "ISC",
@@ -16,6 +16,8 @@
     "include": "^1.1.0",
     "nodemailer": "^6.4.2",
     "routes": "^2.1.0",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^9.10.12",
     "yargs": "^15.3.1"
   }
 }
