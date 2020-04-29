@@ -4,7 +4,7 @@
   "description": "a test cerv project",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server"
+    "start": "node server.js"
   },
   "author": "Toyosi",
   "license": "ISC",
@@ -19,5 +19,8 @@
     "sweetalert": "^2.1.2",
     "sweetalert2": "^9.10.12",
     "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
   }
 }
