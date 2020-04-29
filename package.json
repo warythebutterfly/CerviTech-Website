@@ -17,10 +17,10 @@
     "nodemailer": "^6.4.2",
     "routes": "^2.1.0",
     "sweetalert": "^2.1.2",
-    "sweetalert2": "^9.10.12",
-    "yargs": "^15.3.1"
+    "sweetalert2": "^9.10.12"
   },
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.3",
+    "yargs": "^15.3.1"
   }
 }
