@@ -2,6 +2,16 @@ var express = require('express');
 var path = require('path');
 var router = require('routes');
 var bodyParser = require('body-parser');
+
+var unifiedCrawler = require('appstore-playstore-crawler-api');
+
+unifiedCrawler.google.getSearchResult('Uber', 100)
+  .then(result => console.log(result))
+
+  var gplay = require('google-play-scraper'); 
+  gplay.app({appId: 'com.hashnet.cervitech'})
+   .then(console.log, console.log);
+
 // var nodemailer = require('nodemailer');
 var app = express();
 // var cookieParser = require('cookie-parser');
