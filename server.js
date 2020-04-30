@@ -2,29 +2,20 @@ var express = require('express');
 var path = require('path');
 var router = require('routes');
 var bodyParser = require('body-parser');
+let argv = require('yargs').argv;
 
-var unifiedCrawler = require('appstore-playstore-crawler-api');
-
-  var gplay = require('google-play-scraper'); 
-  gplay.app({appId: 'com.hashnet.cervitech'})
-   .then(result => console.log(result))
-
-// var nodemailer = require('nodemailer');
 var app = express();
-// var cookieParser = require('cookie-parser');
- var home = require('./routes/index');
-// var contact = require('./routes/contact');
-// var elements = require('./routes/elements');
- var include = require('include')(__dirname,'views');
+var home = require('./routes/index');
+
+var include = require('include')(__dirname,'views');
 
 app.set('view engine','ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-// app.use(cookieParser());
+
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/contact', contact);
-// app.use('/elements', elements);
+
 app.use('/', home);
 app.post(function(req, res, next){
     next();
