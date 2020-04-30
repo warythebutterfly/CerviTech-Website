@@ -66,11 +66,7 @@ module.exports = router;
 
  
 
-// var comments = result.comments;
-// var text = "";
-// var i;
-// for (i = 0; i < comments.length; i++) {
-//   text += comments[i];
+
 let name = "steven",
 command = argv._[0];
 
