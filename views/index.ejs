@@ -353,7 +353,38 @@
         </section>
         <!--================End Feature Area =================-->
         
+ <!--================Testimonials Area =================-->
+        <section class="testimonials_area p_120">
+            <div class="container">
+                <div class="main_title">
+                    <h2>Testimonials</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua.</p>
+                </div>
+                <div class="testi_slider owl-carousel">
+                    <% for(var i =0; i < response.length; i++){%>
 
+                
+                    <div class="item">
+                        <div class="testi_item">
+                            <div class="media">
+                                <div class="d-flex">
+                                    <img width="20 !important"src=<%= response[i].userImage %> alt="">
+                                </div>
+                                <div class="media-body">
+                                    <p><%= response[i].text %></p>
+                                    <h4><%= response[i].userName %></h4>
+                                    <h5><%= response[i].score %> stars</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <%}%>
+
+                           
+                </div>
+            </div>
+        </section>
 <!--================Contact Us Area =================-->
         <section class="screenshot_area p_120" id="contact">
             <div class="container">
@@ -566,29 +597,8 @@
             
             <!-- End Sample Area -->
 
-        <!--================Testimonials Area =================-->
-        <section class="testimonials_area p_120">
-            <div class="container">
-                <div class="main_title">
-                    <h2>Testimonials</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua.</p>
-                </div>
-                <div class="testi_slider owl-carousel">
-                    <div class="item">
-                        <div class="testi_item">
-                            <div class="media">
-                                <div class="d-flex">
-                                    <img src="img/testimonials/testi-1.png" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware.</p>
-                                    <h4>Mark Alviro Wiens</h4>
-                                    <h5>CEO at Google</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
+       
+                   <!--  <div class="item">
                         <div class="testi_item">
                             <div class="media">
                                 <div class="d-flex">
@@ -601,10 +611,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+          
         <!--================End Testimonials Area =================-->
         
         <!--================Download App Area =================-->

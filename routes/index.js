@@ -2,11 +2,27 @@
 var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
+let argv = require('yargs').argv;
+var gplay = require('google-play-scraper'); 
+var result = "";
 
-router.get('/', function(req,res){
-res.render('index',{
-	title: 'CerviTech | Home'
+
+router.get('/', async function(req,res){
+
+ // gplay.app({appId: 'com.hashnet.cervitech'})
+ //   .then(result => console.log(result))
+var reviews = await gplay.reviews({
+  appId: 'com.hashnet.cervitech',
+  sort: gplay.sort.NEWEST
+  
 });
+console.log(reviews);
+
+res.render('index',{
+	title: 'CerviTech | Home',
+	response: reviews
+});
+
 });
 
 router.post('/', function(req,res){
@@ -48,11 +64,10 @@ process.env["NODE_TLS_REJECT_UNAUTHORIZED"]=0;
 
 module.exports = router;
 
-let argv = require('yargs').argv;
+ 
 
 
-
-let name = argv.name,
+let name = "steven",
 command = argv._[0];
 
 
@@ -77,4 +92,4 @@ const formal = function(){
 
 
 
-simple();
+formal();

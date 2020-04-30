@@ -1,7 +1,7 @@
 
 console.log("the script is properly referenced");
 
-import swal from 'sweetalert';
+
  $("#submitButton").click(function (e) {
             e.preventDefault();
             name = $("#name").val();
@@ -28,6 +28,11 @@ import swal from 'sweetalert';
             
                 
 });
+
+           function updateDiv()
+{ 
+    $( "#here" ).load(window.location.href + " #here" );
+}
 //             $.post(“/“, dataObject, () => {
 //    Console.log(“data received”)
 // });
