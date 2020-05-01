@@ -3,7 +3,7 @@ var path = require('path');
 var router = require('routes');
 var bodyParser = require('body-parser');
 let argv = require('yargs').argv;
-
+// var gplay = require('google-play-scraper'); 
 var app = express();
 var home = require('./routes/index');
 
@@ -21,6 +21,11 @@ app.post(function(req, res, next){
     next();
 });
 
+
+// var response = gplay.app({appId: 'com.hashnet.cervitech'}).then(result => response = result);
+
+// console.log(response);
+  
 // app.post('/contact-us',function(req,res){
 // 	var sendMailTo = req.body.HelperOptions.to;
 // 	return res.redirect('/')

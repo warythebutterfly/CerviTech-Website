@@ -9,18 +9,21 @@ var result = "";
 
 router.get('/', async function(req,res){
 
- // gplay.app({appId: 'com.hashnet.cervitech'})
- //   .then(result => console.log(result))
+var app = await gplay.app({appId: 'com.hashnet.cervitech'});
 var reviews = await gplay.reviews({
   appId: 'com.hashnet.cervitech',
-  sort: gplay.sort.NEWEST
+  sort: gplay.sort.HELPFULNESS
   
 });
 console.log(reviews);
+var screenshots = app.screenshots;
+console.log(screenshots);
 
 res.render('index',{
 	title: 'CerviTech | Home',
-	response: reviews
+	response: reviews,
+	screenshots : screenshots
+
 });
 
 });

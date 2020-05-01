@@ -139,7 +139,7 @@
                         </div>
                         <div class="col-lg-3">
                             <div class="banner_map_img">
-                                <img class="img-fluid" src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/Home.jpg?alt=media&token=d8402291-a11f-4ace-8540-0a703ef92929" alt="">
+                                <img class="img-fluid" src="https://lh3.googleusercontent.com/3iz2iXs0xiPWiUpN1Reu3s9K3nYNsMdzooDXp0y3Y4Xj2j-GWfE-TFRc4qTNrNenSXQ" alt="">
                             </div>
                         </div>
                     </div>
@@ -347,7 +347,11 @@
                      <div class="item">
                         <img src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/Chart-1.jpg?alt=media&token=189bd234-d125-44e5-a1d3-6a69a7484d47" alt="Exercise">
                     </div>
-                     
+                   <% for(var i =0; i < screenshots.length; i++){%>
+                    <div class="item">
+                        <img src= <%= screenshots[i].screenshots %> alt="Exercise">
+                    </div>
+                     <%}%>
                 </div>
             </div>
         </section>
@@ -373,7 +377,75 @@
                                 <div class="media-body">
                                     <p><%= response[i].text %></p>
                                     <h4><%= response[i].userName %></h4>
-                                    <h5><%= response[i].score %> stars</h5>
+                                   <% if (response[i].score == 5){%>
+                                    <h5><i style="color:orange" class="fa fa-star"></i>
+                                        <i style="color:orange" class="fa fa-star"></i>
+                                        <i style="color:orange" class="fa fa-star"></i>
+                                        <i style="color:orange" class="fa fa-star"></i>
+                                        <i style="color:orange" class="fa fa-star"></i></h5>
+                                    <%}else if (response[i].score == 4.5){%>
+                                    <h5><i style="color:orange" class="fa fa-star"></i>
+                                        <i style="color:orange" class="fa fa-star"></i>
+                                        <i style="color:orange" class="fa fa-star"></i>
+                                        <i style="color:orange" class="fa fa-star"></i>
+                                        <i style="color: orange" class="fa fa-star-half"></i></h5>
+                                    <%} else if (response[i].score == 4){%>
+                                    <h5><i style="color:orange" class="fa fa-star"></i>
+                                        <i style="color:orange" class="fa fa-star"></i>
+                                        <i style="color:orange" class="fa fa-star"></i>
+                                        <i style="color:orange" class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i></h5>
+                                    <%}else if (response[i].score == 3.5){%>
+                                    <h5><i style="color:orange" class="fa fa-star"></i>
+                                        <i style="color:orange" class="fa fa-star"></i>
+                                        <i style="color:orange" class="fa fa-star"></i>
+                                        <i style="color: orange" class="fa fa-star-half"></i>
+                                        <i class="fa fa-star"></i></h5>
+                                    <%}else if (response[i].score == 3){%>
+                                    <h5><i style="color:orange" class="fa fa-star"></i>
+                                        <i style="color:orange" class="fa fa-star"></i>
+                                        <i style="color:orange" class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i></h5>
+                                    <%}else if (response[i].score == 2.5){%>
+                                    <h5><i style="color:orange" class="fa fa-star"></i>
+                                        <i style="color:orange" class="fa fa-star"></i>
+                                        <i style="color: orange" class="fa fa-star-half"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i></h5>
+                                    <%}else if (response[i].score == 2){%>
+                                    <h5><i style="color:orange" class="fa fa-star"></i>
+                                        <i style="color:orange" class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i></h5>
+                                    <%}else if (response[i].score == 1.5){%>
+                                    <h5><i style="color:orange" class="fa fa-star"></i>
+                                        <i style="color: orange" class="fa fa-star-half"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i></h5>
+                                    <%}else if (response[i].score == 1){%>
+                                    <h5><i style="color:orange" class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i></h5>
+                                    <%}else if (response[i].score == 0.5){%>
+                                    <h5><i style="color:orange" class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i></h5>
+                                    <%}else{%>
+                                    <h5><i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i></h5>
+                                    <%}%>
+
+
                                 </div>
                             </div>
                         </div>
