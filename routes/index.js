@@ -34,7 +34,7 @@ router.post('/', function(req,res){
 	var email = req.body.email;
 	var subject = req.body.subject;
 	var message = req.body.message;
-
+  console.log(name);
 var transporter = nodemailer.createTransport({
 	service:'gmail',
 	auth: {
@@ -65,34 +65,35 @@ transporter.sendMail(HelperOptions,(error,info)=>{
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"]=0;
 });
 
+
+//POST route from contact us form
+
+
 module.exports = router;
 
  
 
 
-let name = "steven",
-command = argv._[0];
+// let name = "steven",
+// command = argv._[0];
+
+// const simple = function(){
+// 	if(name){
+// 		console.log(`Hi ${name}`);
+// 	}else{
+// 		console.log('hi!');
+// 	}
+// };
+
+// const formal = function(){
+// 	if(name){
+// 		console.log(`Hello ${name} and welcome`);
+// 	}
+// 	else{
+// 		console.log('hello and welcome');
+// 	}
+// };
 
 
 
-
-const simple = function(){
-	if(name){
-		console.log(`Hi ${name}`);
-	}else{
-		console.log('hi!');
-	}
-};
-
-const formal = function(){
-	if(name){
-		console.log(`Hello ${name} and welcome`);
-	}
-	else{
-		console.log('hello and welcome');
-	}
-};
-
-
-
-formal();
+// formal();
