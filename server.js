@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var router = require('routes');
 var bodyParser = require('body-parser');
-let argv = require('yargs').argv;
+//var argv = require('yargs').argv;
 
 var app = express();
 var home = require('./routes/index');
