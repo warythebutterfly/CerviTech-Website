@@ -1,5 +1,6 @@
 var express = require('express');
 var path = require('path');
+var nodemailer = require('nodemailer');
 var router = require('routes');
 var bodyParser = require('body-parser');
 let argv = require('yargs').argv;
@@ -23,8 +24,6 @@ app.use('/', home);
 
 // app.post('/', function(req,res){
   
-
-
 //     //Instantiate the SMTP server
 //     const smtpTrans = nodemailer.createTransport({
 //       host: 'smtp.gmail.com',
@@ -43,7 +42,7 @@ app.use('/', home);
 //       from: 'Your sender info here', //This is ignored by gmail
 //       to: process.env.GMAIL_USER,
 //       subject: 'New message from contact form at cervitech.com.ng',
-//       text: `${req.body.name} (${req.body.email}) says: ${req.body.message}` 
+//       text: `${req.body.name} (${req.body.email}) says: ${req.body.subject} - ${req.body.message}` 
 //     }
     
 //     //attempt to send the email
