@@ -22,41 +22,39 @@ app.use('/', home);
 //     next();
 // });
 
-// app.post('/', function(req,res){
-  
-//     //Instantiate the SMTP server
-//     const smtpTrans = nodemailer.createTransport({
-//       host: 'smtp.gmail.com',
-//       port: 465,
-//       secure: true,
-//       auth:{
-//         user: process.env.GMAIL_USER,
-//         pass: process.env.GMAIL_PASS
-//       }
-//     })
+app.post('/', function(req,res){
+   //Instantiate the SMTP server
+    const smtpTrans = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+      auth:{
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_PASS
+      }
+    })
+    console.log(req)
+    var object = req.body;
+    console.log(object);
+    //specify what the email will look like
+    const mailOpts = {
+      from: 'Your sender info here', //This is ignored by gmail
+      to: process.env.GMAIL_USER,
+      subject: 'New message from contact form at cervitech.com.ng',
+      text: `${req.body.name} (${req.body.email}) says: ${req.body.subject} - ${req.body.message}` 
+    }
     
-//     var object = req.body;
-//     console.log(object);
-//     //specify what the email will look like
-//     const mailOpts = {
-//       from: 'Your sender info here', //This is ignored by gmail
-//       to: process.env.GMAIL_USER,
-//       subject: 'New message from contact form at cervitech.com.ng',
-//       text: `${req.body.name} (${req.body.email}) says: ${req.body.subject} - ${req.body.message}` 
-//     }
+    //attempt to send the email
+    smtpTrans.sendMail(mailOpts,(error,response)=>{
+      if (error){
+        console.log("error : "+ error)
+        //res.render('contact-failure') //show a page indicating failure;
+      }
+      console.log("successful"+ response)
+      //res.render('contact-success') //shows a page indicating success
+    })
     
-//     //attempt to send the email
-//     smtpTrans.sendMail(mailOpts,(error,response)=>{
-//       if (error){
-//         console.log("error : "+ error)
-//         //res.render('contact-failure') //show a page indicating failure;
-//       }
-//       console.log("successful"+ response)
-//       //res.render('contact-success') //shows a page indicating success
-//     })
-    
-    
-// })
+})
 // var response = gplay.app({appId: 'com.hashnet.cervitech'}).then(result => response = result);
 
 // console.log(response);
