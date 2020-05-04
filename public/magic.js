@@ -42,10 +42,15 @@ console.log("the script is properly referenced");
 var slideIndex = 1;
 showSlides(slideIndex);
 
+
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
+
+function screenPlusSlides(n) {
+    showSlides(slideIndex += n);
+  }
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }

@@ -29,7 +29,7 @@ res.render('index',{
 
 });
 
-console.log(process.env);
+//console.log(process.env);
 
 router.post('/nodemailer', function(req,res){
 	//console.log(req.body);
