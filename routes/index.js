@@ -2,7 +2,9 @@
 var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
-//var argv = require('yargs').argv;
+
+let argv = require('yargs').argv;
+require('dotenv').config();
 var gplay = require('google-play-scraper'); 
 var async  = require('express-async-await');
 var fetch = require('node-fetch');
@@ -11,34 +13,33 @@ var result = "";
 
 router.get('/', async function(req, res){
 
-	var reviews = await gplay.reviews({
-	  appId: 'com.hashnet.cervitech',
-	  sort: gplay.sort.NEWEST
-	});
+var app = await gplay.app({appId: 'com.hashnet.cervitech'});
+var reviews = await gplay.reviews({
+  appId: 'com.hashnet.cervitech',
+  sort: gplay.sort.HELPFULNESS
+  
+});
+//console.log(reviews);
+var screenshots = app.screenshots;
+//console.log(screenshots);
 
-	res.render('index',{
-		title: 'CerviTech Home',
-		response: reviews
-	});
+res.render('index',{
+	title: 'CerviTech | Home',
+	response: reviews,
+	screenshots : screenshots
 
 });
 
+});
 
-router.post('/', function(req,res){
-	console.log(req.body);
+//console.log(process.env);
+
+router.post('/nodemailer', function(req,res){
+
 	var name = req.body.name;
 	var email = req.body.email;
 	var subject = req.body.subject;
 	var message = req.body.message;
-
-	var transporter = nodemailer.createTransport({
-		service:'gmail',
-		auth: {
-			user:'devs.cervitech@gmail.com',
-			pass: 'anelpo14'
-		}
-
-	});
 
 	var HelperOptions =
 	{
@@ -48,43 +49,39 @@ router.post('/', function(req,res){
 		text:message
 	};
 
-	console.log(HelperOptions);
-
-	transporter.sendMail(HelperOptions,(error,info)=>{
-		if(error){
-			return console.log(error);
-		}
-		console.log('successful', info.messageId, info.response);
-		console.log(info);
-	});
-
-	process.env["NODE_TLS_REJECT_UNAUTHORIZED"]=0;
+  //console.log(name);
+var transporter = nodemailer.createTransport({
+	service:'gmail',
+	auth: {
+		user:process.env.GMAIL_USER,
+		pass: process.env.GMAIL_PASS
+	}
 });
+
+var HelperOptions =
+{
+	from:process.env.GMAIL_USER,
+	to: process.env.GMAIL_USER,
+	subject: 'New message from contact form at cervitech.com.ng',
+	text:subject+" - "+message +" from "+email+"("+name+")"
+};
+
+console.log(HelperOptions);
+
+transporter.sendMail(HelperOptions,(error,info)=>{
+	if(error){
+		return console.log(error);
+	}
+	console.log('successful', info.messageId, info.response);
+	console.log(info);
+})
+
+
+process.env["NODE_TLS_REJECT_UNAUTHORIZED"]=0;
+});
+
+
+
 
 module.exports = router;
 
-
-// let name = "steven",
-// command = argv._[0];
-
-
-// const simple = function(){
-// 	if(name){
-// 		console.log(`Hi ${name}`);
-// 	}else{
-// 		console.log('hi!');
-// 	}
-// };
-
-// const formal = function(){
-// 	if(name){
-// 		console.log(`Hello ${name} and welcome`);
-// 	}
-// 	else{
-// 		console.log('hello and welcome');
-// 	}
-// };
-
-
-
-// formal();
