@@ -4,19 +4,20 @@ var router = express.Router();
 var nodemailer = require('nodemailer');
 //var argv = require('yargs').argv;
 var gplay = require('google-play-scraper'); 
+var async  = require('express-async-await');
+var fetch = require('node-fetch');
 var result = "";
 
 
-router.get('/', async function(req,res){
+router.get('/', async function(req, res){
 
 	var reviews = await gplay.reviews({
 	  appId: 'com.hashnet.cervitech',
 	  sort: gplay.sort.NEWEST
-	  
 	});
 
 	res.render('index',{
-		title: 'CerviTech | Home',
+		title: 'CerviTech Home',
 		response: reviews
 	});
 

@@ -21,17 +21,8 @@ app.post(function(req, res, next){
     next();
 });
 
-// app.post('/contact-us',function(req,res){
-// 	var sendMailTo = req.body.HelperOptions.to;
-// 	return res.redirect('/')
-// })
 
 const server = app.listen(process.env.PORT||7000, () => {
   console.log(`Express running on → PORT ${server.address().port}`);
 });
 
-// app.get('/', (req, res) => {
-// 	res.sendFile(path.join(__dirname,"/index.html"))
-// 	const body = req.body;
-// 	console.log(body)
-// })
