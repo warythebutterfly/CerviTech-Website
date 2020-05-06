@@ -2,13 +2,16 @@
 var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
+
 let argv = require('yargs').argv;
 require('dotenv').config();
 var gplay = require('google-play-scraper'); 
+var async  = require('express-async-await');
+var fetch = require('node-fetch');
 var result = "";
 
 
-router.get('/', async function(req,res){
+router.get('/', async function(req, res){
 
 var app = await gplay.app({appId: 'com.hashnet.cervitech'});
 var reviews = await gplay.reviews({
@@ -37,14 +40,7 @@ router.post('/', function(req,res){
 	var email = req.body.email;
 	var subject = req.body.subject;
 	var message = req.body.message;
-  //console.log(name);
-var transporter = nodemailer.createTransport({
-	service:'gmail',
-	auth: {
-		user:process.env.GMAIL_USER,
-		pass: process.env.GMAIL_PASS
-	}
-});
+
 
 var HelperOptions =
 {
@@ -69,34 +65,7 @@ process.env["NODE_TLS_REJECT_UNAUTHORIZED"]=0;
 });
 
 
-// //POST route from contact us form
 
 
 module.exports = router;
 
- 
-
-
-// let name = "steven",
-// command = argv._[0];
-
-// const simple = function(){
-// 	if(name){
-// 		console.log(`Hi ${name}`);
-// 	}else{
-// 		console.log('hi!');
-// 	}
-// };
-
-// const formal = function(){
-// 	if(name){
-// 		console.log(`Hello ${name} and welcome`);
-// 	}
-// 	else{
-// 		console.log('hello and welcome');
-// 	}
-// };
-
-
-
-// formal();
