@@ -4,8 +4,8 @@
   "engines": {
     "node": "12.16.x"
   },
-  "description": "a test cerv project",
-  "main": "index.js",
+  "description": "Training of this application will give you strong straight back, posture and self-confidence for a long time.",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },

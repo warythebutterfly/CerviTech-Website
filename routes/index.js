@@ -31,7 +31,7 @@ res.render('index',{
 
 //console.log(process.env);
 
-router.post('/nodemailer', function(req,res){
+router.post('/', function(req,res){
 	//console.log(req.body);
 	var name = req.body.name;
 	var email = req.body.email;
