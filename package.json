@@ -6,7 +6,7 @@
     "npm": "6.x"
   },
   "description": "a test cerv project",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "nodemon --inspect=0.0.0.0 server.js",
     "start:prod": "node server.js",

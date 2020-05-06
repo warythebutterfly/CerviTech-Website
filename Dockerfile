@@ -18,5 +18,5 @@ COPY --from=builder node_modules node_modules
 
 COPY . .
 
-CMD [ "npm", “run”, "start:prod" ]
+CMD [ "npm", "start", "start:prod" ]
 
