@@ -41,6 +41,8 @@ router.post('/', function(req,res){
 	var subject = req.body.subject;
 	var message = req.body.message;
 
+	
+
 
 var HelperOptions =
 {
@@ -51,6 +53,13 @@ var HelperOptions =
 };
 
 console.log(HelperOptions);
+var transporter = nodemailer.createTransport({
+	service:'gmail',
+	auth: {
+		user:process.env.GMAIL_USER,
+		pass: process.env.GMAIL_PASS
+	}
+});
 
 transporter.sendMail(HelperOptions,(error,info)=>{
 	if(error){
