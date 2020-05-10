@@ -32,7 +32,8 @@ res.render('index',{
 
 });
 
-//console.log(process.env);
+  console.log(process.env.GMAIL_USER);
+  console.log(process.env.GMAIL_USER);
 
 router.post('/nodemailer', function(req,res){
 
@@ -49,7 +50,8 @@ router.post('/nodemailer', function(req,res){
 		text:message
 	};
 
-  //console.log(name);
+
+
 var transporter = nodemailer.createTransport({
 	service:'gmail',
 	auth: {
