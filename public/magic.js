@@ -114,9 +114,10 @@ console.log("the script is properly referenced");
                  //alert.html(response).fadeIn(); 
                   console.log("i'm still in success...");
               },
-              error: function() {
-               //console.log(response);
+              error: function(response) {
                console.log("didn't get to ajax")
+                console.log(response);
+                
                 $('#contactForm').fadeTo( "slow", 1, function() {
                     $('#error').fadeIn()
                     $('.modal').modal('hide');

@@ -64,13 +64,13 @@ var transporter = nodemailer.createTransport({
 		pass: process.env.GMAIL_PASS
 	}
 });
-var statusCode ={
-Successful:"00",
-BadRequest:"01",
-Failed:"02",
-UnknownError:"03"
+		var statusCode ={
+		Successful:"00",
+		BadRequest:"01",
+		Failed:"02",
+		UnknownError:"03"
 
-};
+		};
 
 
 	
@@ -84,6 +84,7 @@ UnknownError:"03"
 	// };
 	
 	if(error){
+		console.log("error in transporter");
 		console.log(error);
 		//return result=statusCode.Failed;
 		//return res.send(result => statusCode.Failed);
@@ -107,7 +108,8 @@ UnknownError:"03"
 		console.log(response);
 		
 		
-	 return res.send(response);
+	 //return res.send(response);
+	 return res.end('{"success" : "Updated Successfully", "status" : 200}');
 	//console.log(data.Successful);
 
 		})
