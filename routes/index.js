@@ -8,7 +8,7 @@ require('dotenv').config();
 var gplay = require('google-play-scraper'); 
 var async  = require('express-async-await');
 var fetch = require('node-fetch');
-var result = "";
+
 
 
 router.get('/', async function(req, res){
@@ -25,8 +25,9 @@ var screenshots = app.screenshots;
 
 res.render('index',{
 	title: 'CerviTech | Home',
-	response: reviews,
-	screenshots : screenshots
+	recommendations: reviews,
+	screenshots : screenshots,
+	
 
 });
 
@@ -35,22 +36,26 @@ res.render('index',{
   console.log(process.env.GMAIL_USER);
   console.log(process.env.GMAIL_USER);
 
-router.post('/nodemailer', function(req,res){
+router.post('/', function(req,res){
+	console.log(req.body);
 
 	var name = req.body.name;
-	var email = req.body.email;
+	var email = req.body.email;	
 	var subject = req.body.subject;
 	var message = req.body.message;
 
-	var HelperOptions =
-	{
-		from:'devs.cervitech@gmail.com',
-		to: 'devs.cervitech@gmail.com',
-		subject:email+" - "+subject,
-		text:message
-	};
+	console.log(name);
+	
+var HelperOptions =
+{
+	from:process.env.GMAIL_USER,
+	to: process.env.GMAIL_USER,
+	subject: 'New message from contact form at cervitech.com.ng',
+	text: subject + " - " + message + " from " + email + "(" + name + ")"
+};
 
 
+console.log(HelperOptions);
 
 var transporter = nodemailer.createTransport({
 	service:'gmail',
@@ -59,28 +64,70 @@ var transporter = nodemailer.createTransport({
 		pass: process.env.GMAIL_PASS
 	}
 });
+var statusCode ={
+Successful:"00",
+BadRequest:"01",
+Failed:"02",
+UnknownError:"03"
 
-var HelperOptions =
-{
-	from:process.env.GMAIL_USER,
-	to: process.env.GMAIL_USER,
-	subject: 'New message from contact form at cervitech.com.ng',
-	text:subject+" - "+message +" from "+email+"("+name+")"
 };
 
-console.log(HelperOptions);
 
-transporter.sendMail(HelperOptions,(error,info)=>{
+	
+		transporter.sendMail(HelperOptions,(error,info)=>{
+	// var statusCode ={
+	// 	Successful:"00",
+	// 	BadRequest:"01",
+	// 	Failed:"02",
+	// 	UnknownError:"03"
+		
+	// };
+	
 	if(error){
-		return console.log(error);
+		console.log(error);
+		//return result=statusCode.Failed;
+		//return res.send(result => statusCode.Failed);
+		
+		var response = "Error sending mail";
+		//success: "Thank you for contacting us...We would get back to you shortly...",
+		
+		return res.send(response);
 	}
 	console.log('successful', info.messageId, info.response);
 	console.log(info);
-})
+	//result=statusCode.Successful;
+	//return res.send(statusCode.Successful => result)
+	// res.send({
+	// 	result,
+	// 	data
+	// })
+	
+	 var response = "Thank you for contacting us...We would get back to you shortly...";
+		//error: "Something went wrong...Please try again..."
+		console.log(response);
+		
+		
+	 return res.send(response);
+	//console.log(data.Successful);
+
+		})
 
 
-process.env["NODE_TLS_REJECT_UNAUTHORIZED"]=0;
-});
+
+
+		process.env["NODE_TLS_REJECT_UNAUTHORIZED"]=0;
+
+
+// res.send({
+	// 	result,
+	// 	data
+	// })
+
+//responses.push(data);
+//return res.send(result);
+//return res.send(data);
+ 
+ });
 
 
 
