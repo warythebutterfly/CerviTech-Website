@@ -24,9 +24,9 @@ router.get('/', async function (req, res) {
 		sort: gplay.sort.HELPFULNESS
 
 	});
-	
+
 	var screenshots = app.screenshots;
-	
+
 
 	res.render('index', {
 		title: 'CerviTech | Home',
@@ -40,7 +40,7 @@ router.get('/', async function (req, res) {
 
 
 router.post('/sendmail', function (req, res) {
-	
+
 	var name = req.body.name;
 	var email = req.body.email;
 	var subject = req.body.subject;
@@ -62,22 +62,22 @@ router.post('/sendmail', function (req, res) {
 			pass: process.env.GMAIL_PASS
 		}
 	});
-	
+
 	transporter.sendMail(HelperOptions, (error, info) => {
-		
+
 		if (error) {
 			console.log("error in transporter");
 			console.log(error);
 			var responseHeader = "Oops!"
 			var response = "Error sending mail...Please do try again...";
-			
+
 
 			return res.send({
-				responseHeader:responseHeader,
+				responseHeader: responseHeader,
 				responseText: response,
-				success : "Updated Successfully",
-				 status : 200, 
-	
+				success: "Updated Successfully",
+				status: 200,
+
 			});
 		}
 		console.log('successful', info.messageId, info.response);
@@ -86,13 +86,13 @@ router.post('/sendmail', function (req, res) {
 		var response = "Thank you for reaching out to us...We would get back to you shortly...";
 		return res.send({
 
-			responseHeader:responseHeader,
+			responseHeader: responseHeader,
 			responseText: response,
-			success : "Updated Successfully",
-			 status : 200, 
+			success: "Updated Successfully",
+			status: 200,
 
 		});
-		
+
 	})
 	process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 

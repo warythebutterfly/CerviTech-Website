@@ -146,6 +146,6 @@ $("#submitButton").click(function (e) {
     }
 
     $('#alert-msg').html("<p style='text-align:center' class='alert alert-danger'>Please fill in all the fields. All fields are required.</p>")
-        validateForm();
+    validateForm();
 });
 
