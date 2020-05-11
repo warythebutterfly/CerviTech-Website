@@ -1,69 +1,70 @@
-
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/48PX2.png?alt=media&token=ba5d6a5d-ea83-414c-ad50-67dba8b10bc9" type="image/png">
-        <title><%= title%></title>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="vendors/linericon/style.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-        <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
-        <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-        <link rel="stylesheet" href="vendors/animate-css/animate.css">
-        <link rel="stylesheet" href="vendors/popup/magnific-popup.css">
-        <!-- main css -->
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/responsive.css">
-        <link rel=""
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon"
+        href="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/48PX2.png?alt=media&token=ba5d6a5d-ea83-414c-ad50-67dba8b10bc9"
+        type="image/png">
+    <title><%= title%></title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/linericon/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="vendors/animate-css/animate.css">
+    <link rel="stylesheet" href="vendors/popup/magnific-popup.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="" <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js">
+    </script>
 
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
-       
-   
-   <style>
-        
+    <style>
         /* Slideshow container */
-       
+
         /* Next & previous buttons */
-        .prev, .next {
-          cursor: pointer;
-          position: absolute;
-          top: 40%;
-          width: auto;
-          padding: 16px;
-          margin-top: -22px;
-          color: white;
-          font-weight: bold;
-          font-size: 18px;
-          transition: 0.6s ease;
-          border-radius: 0 3px 3px 0;
-          user-select: none;
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
         }
-        
+
         /* Position the "next button" to the right */
         .next {
-          right: 0;
-          border-radius: 3px 0 0 3px;
+            right: 0;
+            border-radius: 3px 0 0 3px;
         }
-        
+
         /* On hover, add a black background color with a little bit see-through */
-        .prev:hover, .next:hover {
-          background-color:#943bfd;
+        .prev:hover,
+        .next:hover {
+            background-color: #943bfd;
         }
-        
+
         /* Caption text */
-        
-        
+
+
         /* Number text (1/3 etc) */
-        
-        
-                /* The dots/bullets/indicators */
-                /* .dot {
+
+
+        /* The dots/bullets/indicators */
+        /* .dot {
         cursor: pointer;
         height: 15px;
         width: 15px;
@@ -89,7 +90,7 @@
           animation-name: fade;
           animation-duration: 1.5s;
         } */
-        
+
         /* @-webkit-keyframes fade {
           from {opacity: .4} 
           to {opacity: 1}
@@ -99,42 +100,48 @@
           from {opacity: .4} 
           to {opacity: 1}
         } */
-        
+
         /* On smaller screens, decrease text size */
         /* @media only screen and (max-width: 300px) {
           .prev, .next,.text {font-size: 11px}
         } */
-        </style> 
+    </style>
 
-       
-    </head>
-    <body data-spy="scroll" data-target="#mainNav" data-offset="70">
-        
-        <!--================Header Menu Area =================-->
-        <header class="header_area">
-            <div class="main_menu" id="mainNav">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <div class="container">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div style="width:150px; height:39px;" >
-                        <a class="navbar-brand logo_h nav-link" href="#home"><img style="max-width: 100%; max-height: 100%;" src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/CERRVITECH%20white.png?alt=media&token=bd0d84ad-cc16-4c36-a67b-2366c9d7f332" alt=""></a>
-                        </div>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                            <ul class="nav navbar-nav menu_nav ml-auto">
-                                <!-- <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>  -->
-                                <li class="nav-item"><a class="nav-link" href="#feature">FEATURES</a></li> 
-                               <!--  <li class="nav-item"><a class="nav-link" href="#video">VIDEO</a></li> -->
-                               <!--  <li class="nav-item"><a class="nav-link" href="#price">PRICING</a> -->
-                                <li class="nav-item"><a class="nav-link" href="#screen">SCREENS</a></li>
-                                  <li class="nav-item"><a class="nav-link" href="#privacypolicy">PRIVACY POLICY</a></li>
-                                  <li class="nav-item"><a class="nav-link" href="#contact">CONTACT US</a></li>
-                                <!-- <li class="nav-item"><a class="nav-link" href="#contact">CONTACT US</a>
+
+</head>
+
+<body data-spy="scroll" data-target="#mainNav" data-offset="70">
+
+    <!--================Header Menu Area =================-->
+    <header class="header_area">
+        <div class="main_menu" id="mainNav">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div style="width:150px; height:39px;">
+                        <a class="navbar-brand logo_h nav-link" href="#home"><img
+                                style="max-width: 100%; max-height: 100%;"
+                                src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/CERRVITECH%20white.png?alt=media&token=bd0d84ad-cc16-4c36-a67b-2366c9d7f332"
+                                alt=""></a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto">
+                            <!-- <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>  -->
+                            <li class="nav-item"><a class="nav-link" href="#feature">FEATURES</a></li>
+                            <!--  <li class="nav-item"><a class="nav-link" href="#video">VIDEO</a></li> -->
+                            <!--  <li class="nav-item"><a class="nav-link" href="#price">PRICING</a> -->
+                            <li class="nav-item"><a class="nav-link" href="#screen">SCREENS</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#privacypolicy">PRIVACY POLICY</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">CONTACT US</a></li>
+                            <!-- <li class="nav-item"><a class="nav-link" href="#contact">CONTACT US</a>
                                 <li class="nav-item submenu dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
                                     <ul class="dropdown-menu">
@@ -148,111 +155,132 @@
                                         <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
                                     </ul>
                                 </li>  -->
-                               
-                            </ul>
 
-                        </div> 
-                    </div>
-                </nav>
-            </div>
-        </header>
-        <!--================Header Menu Area =================-->
-        
-        <!--================Home Banner Area =================-->
-        <section class="home_banner_area" id="home">
-            <div class="banner_inner">
-                <div class="container">
-                    <div class="row banner_content">
-                        <div class="col-lg-9">
-                            <h2>The Best App <br />in the Universe</h2>
-                            <h3>Download This App Today!</h3>
-                            <p>Do not compromise on your health.<br>Download our app today and start your journey towards healthy living.</p>
-                           
-                              <div class="app_btn_area">
-                        <div class="app_btn">
-                            <div class="media">
-                                <div class="d-flex">
-                                    <i class="fa fa-apple" aria-hidden="true"></i>
-                                </div>
-                                <div class="media-body">
-                                    <a href="https://apps.apple.com/ng/app/butt-workout-by-7m-booty-app/id869170275"><h4>Available</h4></a>
-                                    <p>on App Store</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="app_btn">
-                            <div class="media">
-                                <div class="d-flex">
-                                    <i class="fa fa-android" aria-hidden="true"></i>
-                                </div>
-                                <div class="media-body">
-                                    <a href="https://play.google.com/store/apps/details?id=com.hashnet.cervitech"><h4>Available</h4></a>
-                                    <p>on Play Store</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="banner_map_img">
-                                <img class="img-fluid" src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/degree_tablet_screen_500X480PX.png?alt=media&token=a73e7218-6f74-4ea5-96b8-7c87bf7726e3" alt="">
-                                <!-- https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/Home.jpg?alt=media&token=d8402291-a11f-4ace-8540-0a703ef92929 -->
-                                <!-- ^old phone screenshot -->
-                                <!-- https://lh3.googleusercontent.com/AxN57iHVxHG25nuXE4_CKX23eqKMSq3-ftJa7On-xWYvL5AUqnzO_0C1wd_87-E3Fw -->
-                                <!-- ^set goal banner -->
-                                <!-- https://lh3.googleusercontent.com/v3aqbTv6zI-l_2pEDndgIrCxWFViaDUh7Pw-CqNZjH62TNXnWwp92jpucJ_SODbi -->
-                                <!-- ^tabley charts screenshot -->
-                            </div>
-                        </div>
+                        </ul>
+
                     </div>
                 </div>
-            </div>
-        </section>
-        <!--================End Home Banner Area =================-->
-        
-        <!--================Feature Area =================-->
-        <section class="feature_area p_120" id="feature">
+            </nav>
+        </div>
+    </header>
+    <!--================Header Menu Area =================-->
+
+    <!--================Home Banner Area =================-->
+    <section class="home_banner_area" id="home">
+        <div class="banner_inner">
             <div class="container">
-                <div class="main_title">
-                    <h2>Unique Features</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua.</p>
-                </div>
-                <div class="feature_inner row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature_item">
-                            <img style="height: 60px;width: 60px;"src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/chart2.png?alt=media&token=8e42ad23-c261-4bfe-b8d7-4ee2af31d2f7" alt="">
-                            <h4>Progress Charts</h4>
-                            <p>inappropriate behavior is often laughed off as boys will be boys,” women face higher conduct standards especially in the workplace. That’s why.</p>
+                <div class="row banner_content">
+                    <div class="col-lg-9">
+                        <h2>The Best App <br />in the Universe</h2>
+                        <h3>Download This App Today!</h3>
+                        <p>Do not compromise on your health.<br>Download our app today and start your journey towards
+                            healthy living.</p>
+
+                        <div class="app_btn_area">
+                            <div class="app_btn">
+                                <div class="media">
+                                    <div class="d-flex">
+                                        <i class="fa fa-apple" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <a
+                                            href="https://apps.apple.com/ng/app/butt-workout-by-7m-booty-app/id869170275">
+                                            <h4>Available</h4>
+                                        </a>
+                                        <p>on App Store</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="app_btn">
+                                <div class="media">
+                                    <div class="d-flex">
+                                        <i class="fa fa-android" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <a href="https://play.google.com/store/apps/details?id=com.hashnet.cervitech">
+                                            <h4>Available</h4>
+                                        </a>
+                                        <p>on Play Store</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature_item">
-                            <img style="height: 60px;width: 80px;" src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/exercises1.png?alt=media&token=0db70413-bb72-4f42-8dfe-f7f96a6025cc" alt="">
-                            <h4>Exercises</h4>
-                            <p>inappropriate behavior is often laughed off as boys will be boys,” women face higher conduct standards especially in the workplace. That’s why.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature_item">
-                            <img style="height: 60px;width: 60px;" src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/goals2cropped.jpg?alt=media&token=a2cd3edb-76b1-4339-aa5d-5313068e674e" alt="">
-                            <h4>Set Goals</h4>
-                            <p>inappropriate behavior is often laughed off as boys will be boys,” women face higher conduct standards especially in the workplace. That’s why.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature_item" >
-                            <img style="height: 60px;width: 80px;" src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/response3.jpg?alt=media&token=211e4e8b-c14a-4f3f-8519-a6f6fef28632" alt="">
-                            <h4>Response Rate</h4>
-                            <p>inappropriate behavior is often laughed off as boys will be boys,” women face higher conduct standards especially in the workplace. That’s why.</p>
+                    <div class="col-lg-3">
+                        <div class="banner_map_img">
+                            <img class="img-fluid"
+                                src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/degree_tablet_screen_500X480PX.png?alt=media&token=a73e7218-6f74-4ea5-96b8-7c87bf7726e3"
+                                alt="">
+                            <!-- https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/Home.jpg?alt=media&token=d8402291-a11f-4ace-8540-0a703ef92929 -->
+                            <!-- ^old phone screenshot -->
+                            <!-- https://lh3.googleusercontent.com/AxN57iHVxHG25nuXE4_CKX23eqKMSq3-ftJa7On-xWYvL5AUqnzO_0C1wd_87-E3Fw -->
+                            <!-- ^set goal banner -->
+                            <!-- https://lh3.googleusercontent.com/v3aqbTv6zI-l_2pEDndgIrCxWFViaDUh7Pw-CqNZjH62TNXnWwp92jpucJ_SODbi -->
+                            <!-- ^tabley charts screenshot -->
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!--================End Feature Area =================-->
-        
-        <!--================Interior Area =================-->
-        <!-- <section class="interior_area">
+        </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!--================Feature Area =================-->
+    <section class="feature_area p_120" id="feature">
+        <div class="container">
+            <div class="main_title">
+                <h2>Unique Features</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+            </div>
+            <div class="feature_inner row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature_item">
+                        <img style="height: 60px;width: 60px;"
+                            src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/chart2.png?alt=media&token=8e42ad23-c261-4bfe-b8d7-4ee2af31d2f7"
+                            alt="">
+                        <h4>Progress Charts</h4>
+                        <p>inappropriate behavior is often laughed off as boys will be boys,” women face higher conduct
+                            standards especially in the workplace. That’s why.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature_item">
+                        <img style="height: 60px;width: 80px;"
+                            src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/exercises1.png?alt=media&token=0db70413-bb72-4f42-8dfe-f7f96a6025cc"
+                            alt="">
+                        <h4>Exercises</h4>
+                        <p>inappropriate behavior is often laughed off as boys will be boys,” women face higher conduct
+                            standards especially in the workplace. That’s why.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature_item">
+                        <img style="height: 60px;width: 60px;"
+                            src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/goals2cropped.jpg?alt=media&token=a2cd3edb-76b1-4339-aa5d-5313068e674e"
+                            alt="">
+                        <h4>Set Goals</h4>
+                        <p>inappropriate behavior is often laughed off as boys will be boys,” women face higher conduct
+                            standards especially in the workplace. That’s why.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature_item">
+                        <img style="height: 60px;width: 80px;"
+                            src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/response3.jpg?alt=media&token=211e4e8b-c14a-4f3f-8519-a6f6fef28632"
+                            alt="">
+                        <h4>Response Rate</h4>
+                        <p>inappropriate behavior is often laughed off as boys will be boys,” women face higher conduct
+                            standards especially in the workplace. That’s why.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Feature Area =================-->
+
+    <!--================Interior Area =================-->
+    <!-- <section class="interior_area">
             <div class="container">
                 <div class="interior_inner row">
                     <div class="col-lg-6">
@@ -268,10 +296,10 @@
                 </div>
             </div>
         </section> -->
-        <!--================End Interior Area =================-->
-        
-        <!--================Interior Area =================-->
-        <!-- <section class="interior_area interior_two">
+    <!--================End Interior Area =================-->
+
+    <!--================Interior Area =================-->
+    <!-- <section class="interior_area interior_two">
             <div class="container">
                 <div class="interior_inner row">
                     <div class="col-lg-5 offset-lg-1">
@@ -293,10 +321,10 @@
                 </div>
             </div>
         </section> -->
-        <!--================End Interior Area =================-->
-        
-        <!--================Price Area =================-->
-       <!--  <section class="price_area p_120" id="price">
+    <!--================End Interior Area =================-->
+
+    <!--================Price Area =================-->
+    <!--  <section class="price_area p_120" id="price">
             <div class="container">
                 <div class="main_title">
                     <h2>Pricing Table</h2>
@@ -381,155 +409,168 @@
                 </div>
             </div>
         </section> -->
-        <!--================End Price Area =================-->
-        
-        <!--================Feature Area =================-->
-        <section class="screenshot_area p_120" id="screen">
-            <div class="container">
-                <div class="main_title">
-                    <h2>Unique Screenshots</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua.</p>
-                </div>
-                <!-- <a class="prev" onclick="screenPlusSlides(-1)">&#10094;</a>
+    <!--================End Price Area =================-->
+
+    <!--================Feature Area =================-->
+    <section class="screenshot_area p_120" id="screen">
+        <div class="container">
+            <div class="main_title">
+                <h2>Unique Screenshots</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+            </div>
+            <!-- <a class="prev" onclick="screenPlusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="screenPlusSlides(1)">&#10095;</a> -->
-  
-                <div class="screenshot_inner owl-carousel">
-                    <div class="item" >
-                        <img src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/Profile.jpg?alt=media&token=5dd08e49-5678-4755-9826-fe52834d2999" alt="Profile">
-                    </div>
-                    <div class="item">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/Home.jpg?alt=media&token=d8402291-a11f-4ace-8540-0a703ef92929" alt="Home">
-                    </div>
-                    <div class="item">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/GOALS.jpg?alt=media&token=b017a0b2-27a1-4bb8-ac7c-ff390408d0d1" alt="Goals">
-                    </div>
-                    <div class="item">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/EDITS.jpg?alt=media&token=376787aa-9f4a-4fda-9e0e-ab59697608dc" alt="Set Goal">
-                    </div>
-                    <div class="item">
-                        <img style="max-height: 100%;" src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/degree_tablet_screen_500X480PX.png?alt=media&token=a73e7218-6f74-4ea5-96b8-7c87bf7726e3" alt="Exercise">
-                    </div>
-                     <div class="item">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/Chart.jpg?alt=media&token=7ca51f46-db44-4536-91df-b6130e3b4f7b" alt="Chart">
-                    </div>
-                     <div class="item">
-                        <img style="max-height: 100%;" src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/Chart-1.jpg?alt=media&token=189bd234-d125-44e5-a1d3-6a69a7484d47" alt="Exercise">
-                    </div>
-                    <div class="item">
-                        <img style="max-height: 100%;max-width: 100%;" src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/chart_tablet_screen_580X430PX.png?alt=media&token=5b1e365f-a7d3-4611-9427-2fe551551730" alt="Exercise">
-                    </div>
-                   <!-- <% for(var i =0; i < screenshots.length; i++){%>
+
+            <div class="screenshot_inner owl-carousel">
+                <div class="item">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/Profile.jpg?alt=media&token=5dd08e49-5678-4755-9826-fe52834d2999"
+                        alt="Profile">
+                </div>
+                <div class="item">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/Home.jpg?alt=media&token=d8402291-a11f-4ace-8540-0a703ef92929"
+                        alt="Home">
+                </div>
+                <div class="item">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/GOALS.jpg?alt=media&token=b017a0b2-27a1-4bb8-ac7c-ff390408d0d1"
+                        alt="Goals">
+                </div>
+                <div class="item">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/EDITS.jpg?alt=media&token=376787aa-9f4a-4fda-9e0e-ab59697608dc"
+                        alt="Set Goal">
+                </div>
+                <div class="item">
+                    <img style="max-height: 100%;"
+                        src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/degree_tablet_screen_500X480PX.png?alt=media&token=a73e7218-6f74-4ea5-96b8-7c87bf7726e3"
+                        alt="Exercise">
+                </div>
+                <div class="item">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/Chart.jpg?alt=media&token=7ca51f46-db44-4536-91df-b6130e3b4f7b"
+                        alt="Chart">
+                </div>
+                <div class="item">
+                    <img style="max-height: 100%;"
+                        src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/Chart-1.jpg?alt=media&token=189bd234-d125-44e5-a1d3-6a69a7484d47"
+                        alt="Exercise">
+                </div>
+                <div class="item">
+                    <img style="max-height: 100%;max-width: 100%;"
+                        src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/chart_tablet_screen_580X430PX.png?alt=media&token=5b1e365f-a7d3-4611-9427-2fe551551730"
+                        alt="Exercise">
+                </div>
+                <!-- <% for(var i =0; i < screenshots.length; i++){%>
                     <div class="item">
                         <img src= <%= screenshots[i].screenshots %> alt="Exercise">
                     </div>
                      <%}%> -->
 
 
-                     
-                     
-                </div>
-                             
-               
-
-              
-                   
-                
 
 
             </div>
-           
-        </section>
-        <!--================End Feature Area =================-->
-        
- <!--================Testimonials Area =================-->
-        <section class="testimonials_area p_120">
-            <div class="container">
-                <div class="main_title">
-                    <h2>Recommendations</h2>
-                    <p>Place your health first.</p>
-                </div>
-               
-                <div class="testi_slider owl-carousel">
-                    <% for(var i =0; i < recommendations.length; i++){%>
 
-                
-                    <div class="item">
 
-                        <div class="testi_item ">
-                            <div class=" media">
-                                <div class="d-flex " style="width:125px ;height:100px">
-                                    <img style="max-width:90%;max-height: 90%; border-radius: 50%;" src=<%= recommendations[i].userImage %> alt="">
-                                </div>
-                                <div class="media-body">
-                                    <p><%= recommendations[i].text %></p>
-                                    <h4><%= recommendations[i].userName %></h4>
-                                   <% if (recommendations[i].score == 5){%>
-                                    <h5><i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i></h5>
-                                    <%}else if (recommendations[i].score == 4.5){%>
-                                    <h5><i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color: orange" class="fa fa-star-half"></i></h5>
-                                    <%} else if (recommendations[i].score == 4){%>
-                                    <h5><i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i></h5>
-                                    <%}else if (recommendations[i].score == 3.5){%>
-                                    <h5><i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color: orange" class="fa fa-star-half"></i>
-                                        <i class="fa fa-star"></i></h5>
-                                    <%}else if (recommendations[i].score == 3){%>
-                                    <h5><i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i></h5>
-                                    <%}else if (recommendations[i].score == 2.5){%>
-                                    <h5><i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color: orange" class="fa fa-star-half"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i></h5>
-                                    <%}else if (recommendations[i].score == 2){%>
-                                    <h5><i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i></h5>
-                                    <%}else if (recommendations[i].score == 1.5){%>
-                                    <h5><i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color: orange" class="fa fa-star-half"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i></h5>
-                                    <%}else if (recommendations[i].score == 1){%>
-                                    <h5><i style="color:orange" class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i></h5>
-                                    <%}else if (recommendations[i].score == 0.5){%>
-                                    <h5><i style="color:orange" class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i></h5>
-                                    <%}else{%>
-                                    <h5><i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i></h5>
-                                    <%}%>
+
+
+
+
+
+
+        </div>
+
+    </section>
+    <!--================End Feature Area =================-->
+
+    <!--================Testimonials Area =================-->
+    <section class="testimonials_area p_120">
+        <div class="container">
+            <div class="main_title">
+                <h2>Recommendations</h2>
+                <p>Place your health first.</p>
+            </div>
+
+            <div class="testi_slider owl-carousel">
+                <% for(var i =0; i < recommendations.length; i++){%>
+
+
+                <div class="item">
+
+                    <div class="testi_item ">
+                        <div class=" media">
+                            <div class="d-flex " style="width:125px ;height:100px">
+                                <img style="max-width:90%;max-height: 90%; border-radius: 50%;"
+                                    src=<%= recommendations[i].userImage %> alt="">
+                            </div>
+                            <div class="media-body">
+                                <p><%= recommendations[i].text %></p>
+                                <h4><%= recommendations[i].userName %></h4>
+                                <% if (recommendations[i].score == 5){%>
+                                <h5><i style="color:orange" class="fa fa-star"></i>
+                                    <i style="color:orange" class="fa fa-star"></i>
+                                    <i style="color:orange" class="fa fa-star"></i>
+                                    <i style="color:orange" class="fa fa-star"></i>
+                                    <i style="color:orange" class="fa fa-star"></i></h5>
+                                <%}else if (recommendations[i].score == 4.5){%>
+                                <h5><i style="color:orange" class="fa fa-star"></i>
+                                    <i style="color:orange" class="fa fa-star"></i>
+                                    <i style="color:orange" class="fa fa-star"></i>
+                                    <i style="color:orange" class="fa fa-star"></i>
+                                    <i style="color: orange" class="fa fa-star-half"></i></h5>
+                                <%} else if (recommendations[i].score == 4){%>
+                                <h5><i style="color:orange" class="fa fa-star"></i>
+                                    <i style="color:orange" class="fa fa-star"></i>
+                                    <i style="color:orange" class="fa fa-star"></i>
+                                    <i style="color:orange" class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i></h5>
+                                <%}else if (recommendations[i].score == 3.5){%>
+                                <h5><i style="color:orange" class="fa fa-star"></i>
+                                    <i style="color:orange" class="fa fa-star"></i>
+                                    <i style="color:orange" class="fa fa-star"></i>
+                                    <i style="color: orange" class="fa fa-star-half"></i>
+                                    <i class="fa fa-star"></i></h5>
+                                <%}else if (recommendations[i].score == 3){%>
+                                <h5><i style="color:orange" class="fa fa-star"></i>
+                                    <i style="color:orange" class="fa fa-star"></i>
+                                    <i style="color:orange" class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i></h5>
+                                <%}else if (recommendations[i].score == 2.5){%>
+                                <h5><i style="color:orange" class="fa fa-star"></i>
+                                    <i style="color:orange" class="fa fa-star"></i>
+                                    <i style="color: orange" class="fa fa-star-half"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i></h5>
+                                <%}else if (recommendations[i].score == 2){%>
+                                <h5><i style="color:orange" class="fa fa-star"></i>
+                                    <i style="color:orange" class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i></h5>
+                                <%}else if (recommendations[i].score == 1.5){%>
+                                <h5><i style="color:orange" class="fa fa-star"></i>
+                                    <i style="color: orange" class="fa fa-star-half"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i></h5>
+                                <%}else if (recommendations[i].score == 1){%>
+                                <h5><i style="color:orange" class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i></h5>
+                                <%}else if (recommendations[i].score == 0.5){%>
+                                <h5><i style="color:orange" class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i></h5>
+                                <%}else{%>
+                                <h5><i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i></h5>
+                                <%}%>
 
 
                                 </div>
@@ -541,74 +582,85 @@
 
                     <%}%>
 
-                           
-                </div>
-                <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+                            </div>
+                            <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
-               
-                
-            </div>
-        </section>
-
- <!--================Privacy Policy Area =================-->
-        <section class="sample-text-area" id="privacypolicy">
-            <div class="container">
-                 <div class="main_title">
-                    <h2>Privacy Policy</h2>
-                    <p class="sample-text">Effective date: December 12, 2019.<br>
 
 
-
-            We operate the CerviTech mobile application (the "Service").<br>
-
-            This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
-
-         We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions.</p>
-                </div>
-           
-      
-
-                
-                   
-
-                    <h3 class="text-heading title_color">Information Collection And Use</h3>
-                    <p style="font-size:15px" class="sample-text">
-                      
-                    We collect several different types of information for various purposes to provide and improve our service to you.
-                   </p>
-<br><br>
-                   <!--  <h3 class="text-heading title_color">Types of Data Collected</h3> -->
-                  
-                        <h3 class="mb-30 title_color">Types of Data Collected</h3>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="single-defination">
-                                    <h4 class="mb-20">Personal Data</h4>
-                                     <p>While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:</p>
-
-                                    <ul class="unordered-list">
-                                        <li>Email address</li>
-                                        <li>First name and last name</li>
-                                        <li>Phone number</li>
-                                        <li>Cookies and Usage Data</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single-defination">
-                                    <h4 class="mb-20">Usage Data</h4>
-                                     <p>When you access the Service by or through a mobile device, we may collect certain information automatically, including, but not limited to, the type of mobile device you use, your mobile device unique ID, the IP address of your mobile device, your mobile operating system, the type of mobile Internet browser you use, unique device identifiers and other diagnostic data ("Usage Data").</p>
-                                </div>
-                            </div>
-                        
-                            
-                           
                         </div>
+    </section>
 
-                        <br><br>
-                   
-                     <h3 class="text-heading title_color">Use Of Data</h3>
-                    <p style="font-size:15px" class="sample-text">CerviTech uses the collected data for various purposes:</p>
+    <!--================Privacy Policy Area =================-->
+    <section class="sample-text-area" id="privacypolicy">
+        <div class="container">
+            <div class="main_title">
+                <h2>Privacy Policy</h2>
+                <p class="sample-text">Effective date: December 12, 2019.<br>
+
+
+
+                    We operate the CerviTech mobile application (the "Service").<br>
+
+                    This page informs you of our policies regarding the collection, use, and disclosure of personal data
+                    when you use our Service and the choices you have associated with that data.
+
+                    We use your data to provide and improve the Service. By using the Service, you agree to the
+                    collection and use of information in accordance with this policy. Unless otherwise defined in this
+                    Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and
+                    Conditions.</p>
+            </div>
+
+
+
+
+
+
+            <h3 class="text-heading title_color">Information Collection And Use</h3>
+            <p style="font-size:15px" class="sample-text">
+
+                We collect several different types of information for various purposes to provide and improve our
+                service to you.
+            </p>
+            <br><br>
+            <!--  <h3 class="text-heading title_color">Types of Data Collected</h3> -->
+
+            <h3 class="mb-30 title_color">Types of Data Collected</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="single-defination">
+                        <h4 class="mb-20">Personal Data</h4>
+                        <p>While using our Service, we may ask you to provide us with certain personally identifiable
+                            information that can be used to contact or identify you ("Personal Data"). Personally
+                            identifiable information may include, but is not limited to:</p>
+
+                        <ul class="unordered-list">
+                            <li>Email address</li>
+                            <li>First name and last name</li>
+                            <li>Phone number</li>
+                            <li>Cookies and Usage Data</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single-defination">
+                        <h4 class="mb-20">Usage Data</h4>
+                        <p>When you access the Service by or through a mobile device, we may collect certain information
+                            automatically, including, but not limited to, the type of mobile device you use, your mobile
+                            device unique ID, the IP address of your mobile device, your mobile operating system, the
+                            type of mobile Internet browser you use, unique device identifiers and other diagnostic data
+                            ("Usage Data").</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <br><br>
+
+            <h3 class="text-heading title_color">Use Of Data</h3>
+            <p style="font-size:15px" class="sample-text">CerviTech uses the collected data for various purposes:</p>
             <ul class="unordered-list">
                 <li>To provide and maintain the Service</li>
                 <li>To notify you about changes to our Service</li>
@@ -618,16 +670,24 @@
                 <li>To monitor the usage of the Service</li>
                 <li>To detect, prevent and address technical issues</li>
             </ul>
-<br><br>
-             <h3 class="text-heading title_color">Transfer Of Data</h3>
-                    <p style="font-size:15px" class="sample-text"> Your information, including Personal Data, may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from your jurisdiction.
-            If you are located outside Nigeria and choose to provide information to us, please note that we transfer the data, including Personal Data, to Nigeria and process it there.
-            Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.
-            CerviTech will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of your data and other personal information.</p>
+            <br><br>
+            <h3 class="text-heading title_color">Transfer Of Data</h3>
+            <p style="font-size:15px" class="sample-text"> Your information, including Personal Data, may be transferred
+                to — and maintained on — computers located outside of your state, province, country or other
+                governmental jurisdiction where the data protection laws may differ than those from your jurisdiction.
+                If you are located outside Nigeria and choose to provide information to us, please note that we transfer
+                the data, including Personal Data, to Nigeria and process it there.
+                Your consent to this Privacy Policy followed by your submission of such information represents your
+                agreement to that transfer.
+                CerviTech will take all steps reasonably necessary to ensure that your data is treated securely and in
+                accordance with this Privacy Policy and no transfer of your Personal Data will take place to an
+                organization or a country unless there are adequate controls in place including the security of your
+                data and other personal information.</p>
             <br><br>
 
-                <h3 class="text-heading title_color">Legal Requirements</h3>
-                    <p style="font-size:15px" class="sample-text">CerviTech may disclose your Personal Data in the good faith belief that such action is necessary to:</p>
+            <h3 class="text-heading title_color">Legal Requirements</h3>
+            <p style="font-size:15px" class="sample-text">CerviTech may disclose your Personal Data in the good faith
+                belief that such action is necessary to:</p>
             <ul class="unordered-list">
                 <li>To comply with a legal obligation</li>
                 <li>To protect and defend the rights or property of CerviTech</li>
@@ -635,43 +695,61 @@
                 <li>To protect the personal safety of users of the Service or the public</li>
                 <li>To protect against legal liability</li>
             </ul>
-                <br><br>
+            <br><br>
 
-                 <h3 class="text-heading title_color">Security Of Data</h3>
-                    <p style="font-size:15px" class="sample-text">We may employ third party companies and individuals to facilitate our Service ("Service Providers"), to provide the Service on our behalf, to perform Service-related services or to assist us in analyzing how our Service is used.
-            These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
-
-
-              <br><br>
-
-              <h3 class="text-heading title_color">Service Providers</h3>
-                    <p style="font-size:15px" class="sample-text">The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.</p>
-
-                <br><br>
-
-              <h3 class="text-heading title_color">Links To Other Sites</h3>
-                    <p style="font-size:15px" class="sample-text">Our Service may contain links to other sites that are not operated by us (for example, our <a target="_blank" href="https://www.spine.org/KnowYourBack/Prevention/Exercise/Cervical-Exercise">reference link for exercises</a>). If you click on a third party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit.
-            We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
+            <h3 class="text-heading title_color">Security Of Data</h3>
+            <p style="font-size:15px" class="sample-text">We may employ third party companies and individuals to
+                facilitate our Service ("Service Providers"), to provide the Service on our behalf, to perform
+                Service-related services or to assist us in analyzing how our Service is used.
+                These third parties have access to your Personal Data only to perform these tasks on our behalf and are
+                obligated not to disclose or use it for any other purpose.</p>
 
 
-                 <br><br>
+            <br><br>
 
-              <h3 class="text-heading title_color">Children's Privacy</h3>
-                    <p style="font-size:15px" class="sample-text">Our Service does not address anyone under the age of 13 ("Children").
-            We do not knowingly collect personally identifiable information from anyone under the age of 13. If you are a parent or guardian and you are aware that your Children has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from children without verification of parental consent, we take steps to remove that information from our servers.</p>
+            <h3 class="text-heading title_color">Service Providers</h3>
+            <p style="font-size:15px" class="sample-text">The security of your data is important to us, but remember
+                that no method of transmission over the Internet, or method of electronic storage is 100% secure. While
+                we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its
+                absolute security.</p>
+
+            <br><br>
+
+            <h3 class="text-heading title_color">Links To Other Sites</h3>
+            <p style="font-size:15px" class="sample-text">Our Service may contain links to other sites that are not
+                operated by us (for example, our <a target="_blank"
+                    href="https://www.spine.org/KnowYourBack/Prevention/Exercise/Cervical-Exercise">reference link for
+                    exercises</a>). If you click on a third party link, you will be directed to that third party's site.
+                We strongly advise you to review the Privacy Policy of every site you visit.
+                We have no control over and assume no responsibility for the content, privacy policies or practices of
+                any third party sites or services.</p>
 
 
-                  <br><br>
+            <br><br>
 
-                    <h3 class="text-heading title_color">Changes To This Privacy Policy</h3>
-                    <p style="font-size:15px" class="sample-text">We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
-            We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the "effective date" at the top of this Privacy Policy.
-            You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+            <h3 class="text-heading title_color">Children's Privacy</h3>
+            <p style="font-size:15px" class="sample-text">Our Service does not address anyone under the age of 13
+                ("Children").
+                We do not knowingly collect personally identifiable information from anyone under the age of 13. If you
+                are a parent or guardian and you are aware that your Children has provided us with Personal Data, please
+                contact us. If we become aware that we have collected Personal Data from children without verification
+                of parental consent, we take steps to remove that information from our servers.</p>
 
-                                 <br><br>
-                   
-                  
-                        <!-- <h3 class="mb-30 title_color">Contact Us</h3>
+
+            <br><br>
+
+            <h3 class="text-heading title_color">Changes To This Privacy Policy</h3>
+            <p style="font-size:15px" class="sample-text">We may update our Privacy Policy from time to time. We will
+                notify you of any changes by posting the new Privacy Policy on this page.
+                We will let you know via email and/or a prominent notice on our Service, prior to the change becoming
+                effective and update the "effective date" at the top of this Privacy Policy.
+                You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy
+                Policy are effective when they are posted on this page.</p>
+
+            <br><br>
+
+
+            <!-- <h3 class="mb-30 title_color">Contact Us</h3>
                         <div class="row">
                             <div class="col-lg-12">
                                 <blockquote class="generic-blockquote">
@@ -684,20 +762,21 @@
                                 </blockquote>
                             </div>
                         </div> -->
-                 
-          </div>
-        </section>
 
- <!--================End Privacy Policy Area =================-->
-
-  <!--================Contact Us Area =================-->
-  <section class="screenshot_area p_120" id="contact">
-    <div class="container">
-         <div class="main_title">
-            <h2>Contact Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua.</p>
         </div>
-<!--  <div id="mapBox" class="mapBox" 
+    </section>
+
+    <!--================End Privacy Policy Area =================-->
+
+    <!--================Contact Us Area =================-->
+    <section class="screenshot_area p_120" id="contact">
+        <div class="container">
+            <div class="main_title">
+                <h2>Contact Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+            </div>
+            <!--  <div id="mapBox" class="mapBox" 
     data-lat="40.701083" 
     data-lon="-74.1522848" 
     data-zoom="13" 
@@ -705,70 +784,75 @@
     data-mlat="40.701083"
     data-mlon="-74.1522848">
 </div> -->
-<div class="row">
-    <div class="col-lg-3">
-        <div class="contact_info">
-            <div class="info_item">
-                <i class="lnr lnr-home"></i>
-                <h6>Lagos, Nigeria</h6>
-                <p>Department of Physiotherapy · University of Lagos, Akoka.</p>
-            </div>
-            <div class="info_item">
-                <i class="lnr lnr-phone-handset"></i>
-                <h6><a href="tel:+234-805-964-3996">+234-805-964-3996</a></h6>
-                <p>Mon to Fri 9am to 6pm</p>
-            </div>
-            <div class="info_item">
-                <i class="lnr lnr-envelope"></i>
-                <h6><a href="mailto:contact.cervitech@gmail.com">contact.cervitech@gmail.com</a></h6>
-                <p>We would love to hear from you, send in your complaints.</p>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="contact_info">
+                        <div class="info_item">
+                            <i class="lnr lnr-home"></i>
+                            <h6>Lagos, Nigeria</h6>
+                            <p>Department of Physiotherapy · University of Lagos, Akoka.</p>
+                        </div>
+                        <div class="info_item">
+                            <i class="lnr lnr-phone-handset"></i>
+                            <h6><a href="tel:+234-805-964-3996">+234-805-964-3996</a></h6>
+                            <p>Mon to Fri 9am to 6pm</p>
+                        </div>
+                        <div class="info_item">
+                            <i class="lnr lnr-envelope"></i>
+                            <h6><a href="mailto:contact.cervitech@gmail.com">contact.cervitech@gmail.com</a></h6>
+                            <p>We would love to hear from you, send in your complaints.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="here" class="col-lg-9">
+                    <div id="alert-msg" class="col"></div>
+                    <form class="row contact_form" id="contactForm" name="contactForm">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" name="name"
+                                    placeholder="Enter your name" required="true">
+                                <div style="width: 95%;" id="alert-name-msg"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="Enter email address" required="required">
+
+                                <div style="width: 95%;" id="alert-email-msg"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="subject" name="subject"
+                                    placeholder="Enter Subject" required="true">
+                                <div style="width: 95%;" id="alert-subject-msg"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" id="message" rows="1"
+                                    placeholder="Enter Message" aria-required="true"></textarea>
+                                <div style="width: 95%;" id="alert-message-msg"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-right">
+                            <button type="submit" id="submitButton" value="submit" class="btn submit_btn">Send
+                                Message</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="here" class="col-lg-9">
-        <div id="alert-msg" class="col"></div>
-        <form class="row contact_form" id="contactForm" name="contactForm">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required="true">
-                    <div style="width: 95%;" id="alert-name-msg"></div>
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address" required="required">
-
-                    <div style="width: 95%;" id="alert-email-msg"></div>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject" required="true">
-                    <div style="width: 95%;" id="alert-subject-msg"></div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message" aria-required="true"></textarea>
-                    <div style="width: 95%;" id="alert-message-msg"></div>
-                </div>
-            </div>
-            <div class="col-md-12 text-right">
-                <button type="submit" id="submitButton" value="submit" class="btn submit_btn">Send Message</button>
-            </div>
-        </form>
-    </div>
-</div>
-</div>
-</section>
+    </section>
 
 
-<!--================End Contact Us Area =================-->
+    <!--================End Contact Us Area =================-->
 
 
-       
-       <!-- Start Sample Area -->
-            
-            <!-- End Sample Area -->
 
-       
-                   <!--  <div class="item">
+    <!-- Start Sample Area -->
+
+    <!-- End Sample Area -->
+
+
+    <!--  <div class="item">
                         <div class="testi_item">
                             <div class="media">
                                 <div class="d-flex">
@@ -783,9 +867,9 @@
                         </div>
           
         <!--================End Testimonials Area =================-->
-        
-        <!--================Download App Area =================-->
-       <!--  <section class="download_app_area p_120">
+
+    <!--================Download App Area =================-->
+    <!--  <section class="download_app_area p_120">
             <div class="container">
                 <div class="app_inner">
                     <h2>Download This App Today!</h2>
@@ -817,10 +901,10 @@
                 </div>
             </div>
         </section> -->
-        <!--================End Download App Area =================-->
-        
-        <!--================Latest News Area =================-->
-        <!-- <section class="latest_news_area p_120">
+    <!--================End Download App Area =================-->
+
+    <!--================Latest News Area =================-->
+    <!-- <section class="latest_news_area p_120">
             <div class="container">
                 <div class="main_title">
                     <h2>Latest News</h2>
@@ -866,123 +950,125 @@
                 </div>
             </div>
         </section> -->
-        <!--================End Latest News Area =================-->
-        
-        <!--================ start footer Area  =================-->    
-        <!-- Footer -->
-<footer class="page-footer font-small cyan darken-3">
+    <!--================End Latest News Area =================-->
 
-  <!-- Footer Elements -->
-  <div class="container">
+    <!--================ start footer Area  =================-->
+    <!-- Footer -->
+    <footer class="page-footer font-small cyan darken-3">
 
-    <!-- Grid row-->
-    <div class="row">
+        <!-- Footer Elements -->
+        <div class="container">
 
-      <!-- Grid column -->
-      <div class="col-md-12 py-5">
-        <center><div class="mb-5 flex-center">
+            <!-- Grid row-->
+            <div class="row">
 
-          <!-- Facebook -->
-          <!-- <a class="fb-ic">
+                <!-- Grid column -->
+                <div class="col-md-12 py-5">
+                    <center>
+                        <div class="mb-5 flex-center">
+
+                            <!-- Facebook -->
+                            <!-- <a class="fb-ic">
             <i class="fa fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
           </a> -->
-          <!-- Twitter -->
-          <!-- <a class="tw-ic">
+                            <!-- Twitter -->
+                            <!-- <a class="tw-ic">
             <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
           </a> -->
-          <!-- Google +-->
-         <!--  <a class="gplus-ic">
+                            <!-- Google +-->
+                            <!--  <a class="gplus-ic">
             <i class="fa fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
           </a> -->
-          <!--Linkedin -->
-         <!--  <a class="li-ic">
+                            <!--Linkedin -->
+                            <!--  <a class="li-ic">
             <i class="far fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
           </a> -->
-          <!--Instagram-->
-          <!-- <a class="ins-ic">
+                            <!--Instagram-->
+                            <!-- <a class="ins-ic">
             <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
           </a> -->
-          <!--Pinterest-->
-          <!-- <a class="pin-ic">
+                            <!--Pinterest-->
+                            <!-- <a class="pin-ic">
             <i class="fa fa-pinterest fa-lg white-text fa-2x"> </i>
           </a>
         </div> -->
-    </center>
-      </div>
-      <!-- Grid column -->
+                    </center>
+                </div>
+                <!-- Grid column -->
 
+            </div>
+            <!-- Grid row-->
+
+        </div>
+        <!-- Footer Elements -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://cervitech.com.ng/">CerviTech</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+    <!--================ End footer Area  =================-->
+
+    <!--================Contact Success and Error message Area =================-->
+    <div id="success" class="modal modal-message fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" style="float: right;" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-close"></i>
+                    </button>
+                    <h2 id="modal-success-header">Thank you</h2>
+                    <p id="modal-success-content">You would hear from us shortly...</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- Grid row-->
 
-  </div>
-  <!-- Footer Elements -->
+    <!-- Modals error -->
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://cervitech.com.ng/">CerviTech</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
-        <!--================ End footer Area  =================-->
-        
-          <!--================Contact Success and Error message Area =================-->
-          <div id="success" class="modal modal-message fade" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <i class="fa fa-close"></i>
-                        </button>
-                        <h2 id="modal-success-header">Thank you</h2>
-                        <p id="modal-success-content">You would hear from us shortly...</p>
-                    </div>
+    <div id="error" class="modal modal-message fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-close"></i>
+                    </button>
+                    <h2>Sorry!</h2>
+                    <p id="modal-error-content">Something went wrong...Please do try again...</p>
                 </div>
             </div>
         </div>
-
-        <!-- Modals error -->
-
-        <div id="error" class="modal modal-message fade" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <i class="fa fa-close"></i>
-                        </button>
-                        <h2>Sorry !</h2>
-                        <p id="modal-error-content">Something went wrong...Please do try again...</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--================End Contact Success and Error message Area =================-->
-        
+    </div>
+    <!--================End Contact Success and Error message Area =================-->
 
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
-        <script src="js/popper.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/stellar.js"></script>
-        <script src="vendors/lightbox/simpleLightbox.min.js"></script>
-        <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-        <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-        <script src="vendors/isotope/isotope-min.js"></script>
-        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-        <script src="js/jquery.ajaxchimp.min.js"></script>
-        <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
-        <script src="vendors/counter-up/jquery.counterup.js"></script>
-        <script src="js/mail-script.js"></script>
-        <script src="sweet/sweetalert.min.js"></script>
-        <script src="vendors/popup/jquery.magnific-popup.min.js"></script>
-        <script src="js/theme.js"></script>
-        <script src="/magic.js"></script>
-        <!-- <script src="/contact.js"></script> -->
 
-       
-    </body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="vendors/isotope/isotope-min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendors/counter-up/jquery.counterup.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="sweet/sweetalert.min.js"></script>
+    <script src="vendors/popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="/magic.js"></script>
+    <!-- <script src="/contact.js"></script> -->
+
+
+</body>
+
 </html>
