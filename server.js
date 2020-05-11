@@ -8,11 +8,11 @@ var bodyParser = require('body-parser');
 var app = express();
 var home = require('./routes/index');
 require('dotenv').config();
-var include = require('include')(__dirname,'views');
+var include = require('include')(__dirname, 'views');
 
-app.set('view engine','ejs');
+app.set('view engine', 'ejs');
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
