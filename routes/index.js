@@ -51,7 +51,7 @@ router.post('/sendmail', function (req, res) {
 		from: process.env.GMAIL_USER,
 		to: process.env.GMAIL_USER,
 		subject: 'New message from contact form at cervitech.com.ng',
-		text: subject + " - " + message + " from " + email + "(" + name + ")"
+		text: "<b>Subject</b> - "+subject + "<br><b>Message</b> - " + message + "<br>This mail was sent from " + email + "(" + name + ")"
 	};
 
 
