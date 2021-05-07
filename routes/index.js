@@ -27,7 +27,7 @@ try{
 
 	});
 	//console.log(app);
-	//console.log(reviews);
+	console.log(reviews);
 
 
 	var screenshots = app.screenshots;
