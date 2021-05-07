@@ -17,24 +17,39 @@ var fetch = require('node-fetch');
 
 
 router.get('/', async function (req, res) {
+try{
 
 	var app = await gplay.app({ appId: 'com.hashnet.cervitech' });
 	var reviews = await gplay.reviews({
 		appId: 'com.hashnet.cervitech',
-		sort: gplay.sort.HELPFULNESS
+		sort: gplay.sort.HELPFULNESS,
+		num:10
 
 	});
+	//console.log(app);
+	//console.log(reviews);
+
 
 	var screenshots = app.screenshots;
-
+	 var title = app.title;
+	
+	 //console.log(screenshots);
 
 	res.render('index', {
-		title: 'CerviTech | Home',
-		recommendations: reviews,
+		title: title,
+		recommendations: reviews.data,
 		screenshots: screenshots,
 
 
 	});
+}
+	catch (err){
+		res.render('index', {
+			
+			title: "CerviTech",
+	
+		});
+	}
 
 });
 
@@ -69,7 +84,7 @@ router.post('/sendmail', function (req, res) {
 			console.log("error in transporter");
 			console.log(error);
 			var responseHeader = "Oops!"
-			var response = "Error sending mail...Please do try again...";
+			var response = "Error sending mail...Please do try again.";
 
 
 			return res.send({
