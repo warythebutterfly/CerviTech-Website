@@ -470,12 +470,7 @@
                         src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/chart_tablet_screen_580X430PX.png?alt=media&token=5b1e365f-a7d3-4611-9427-2fe551551730"
                         alt="Exercise">
                 </div>
-                <!-- <% for(var i =0; i < screenshots.length; i++){%>
-                    <div class="item">
-                        <img src= <%= screenshots[i].screenshots %> alt="Exercise">
-                    </div>
-                     <%}%> -->
-
+           
 
 
 
@@ -502,192 +497,157 @@
             </div>
     <!-- <div><%= recommendations%></div> -->
             <div class="testi_slider owl-carousel">
-                <% recommendations.forEach(review => { %>
-
-
-                <div class="item">
-                    
-                    <div class="testi_item ">
-                        <div class=" media">
-                            <div class="d-flex " style="width:125px ;height:100px">
-                                <img style="max-width:90%;max-height: 90%; border-radius: 50%;"
-                                    src=<%= review.userImage %> alt="userImage">
-                            </div>
-                            <div class="media-body">
-                                <p><%= review.text %></p>
-                                <h4><%= review.userName %></h4>
-                                <% if (review.score == 5){ %>
-                                    <h5><i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i></h5>
-                                    <% }else if (review.score == 4.5){ %>
-                                    <h5><i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color: orange" class="fa fa-star-half"></i></h5>
-                                    <% } else if (review.score == 4){ %>
-                                    <h5><i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i></h5>
-                                    <% }else if (review.score == 3.5){ %>
-                                    <h5><i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color: orange" class="fa fa-star-half"></i>
-                                        <i class="fa fa-star"></i></h5>
-                                    <% }else if (review.score == 3){ %>
-                                    <h5><i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i></h5>
-                                    <% }else if (review.score == 2.5){ %>
-                                    <h5><i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color: orange" class="fa fa-star-half"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i></h5>
-                                    <% }else if (review.score == 2){ %>
-                                    <h5><i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color:orange" class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i></h5>
-                                    <% }else if (review.score == 1.5){ %>
-                                    <h5><i style="color:orange" class="fa fa-star"></i>
-                                        <i style="color: orange" class="fa fa-star-half"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i></h5>
-                                    <% }else if (review.score == 1){ %>
-                                    <h5><i style="color:orange" class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i></h5>
-                                    <% }else if (review.score == 0.5){ %>
-                                    <h5><i style="color:orange" class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i></h5>
-                                    <% }else{ %>
-                                    <h5><i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i></h5>
-                                    <% } %>
-                               
+                <% if (recommendations != null) { %>
+                    <% recommendations.forEach(review => { %>
+                        <div class="item">
+                            <div class="testi_item ">
+                                <div class=" media">
+                                    <div class="d-flex " style="width:125px ;height:100px">
+                                        <img style="max-width:90%;max-height: 90%; border-radius: 50%;"
+                                            src=<%= review.userImage %> alt="userImage">
+                                    </div>
+                                    <div class="media-body">
+                                        <p><%= review.text %></p>
+                                        <h4><%= review.userName %></h4>
+                                        <% if (review.score == 5){ %>
+                                            <h5><i style="color:orange" class="fa fa-star"></i>
+                                                <i style="color:orange" class="fa fa-star"></i>
+                                                <i style="color:orange" class="fa fa-star"></i>
+                                                <i style="color:orange" class="fa fa-star"></i>
+                                                <i style="color:orange" class="fa fa-star"></i></h5>
+                                            <% }else if (review.score == 4.5){ %>
+                                            <h5><i style="color:orange" class="fa fa-star"></i>
+                                                <i style="color:orange" class="fa fa-star"></i>
+                                                <i style="color:orange" class="fa fa-star"></i>
+                                                <i style="color:orange" class="fa fa-star"></i>
+                                                <i style="color: orange" class="fa fa-star-half"></i></h5>
+                                            <% } else if (review.score == 4){ %>
+                                            <h5><i style="color:orange" class="fa fa-star"></i>
+                                                <i style="color:orange" class="fa fa-star"></i>
+                                                <i style="color:orange" class="fa fa-star"></i>
+                                                <i style="color:orange" class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i></h5>
+                                            <% }else if (review.score == 3.5){ %>
+                                            <h5><i style="color:orange" class="fa fa-star"></i>
+                                                <i style="color:orange" class="fa fa-star"></i>
+                                                <i style="color:orange" class="fa fa-star"></i>
+                                                <i style="color: orange" class="fa fa-star-half"></i>
+                                                <i class="fa fa-star"></i></h5>
+                                            <% }else if (review.score == 3){ %>
+                                            <h5><i style="color:orange" class="fa fa-star"></i>
+                                                <i style="color:orange" class="fa fa-star"></i>
+                                                <i style="color:orange" class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i></h5>
+                                            <% }else if (review.score == 2.5){ %>
+                                            <h5><i style="color:orange" class="fa fa-star"></i>
+                                                <i style="color:orange" class="fa fa-star"></i>
+                                                <i style="color: orange" class="fa fa-star-half"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i></h5>
+                                            <% }else if (review.score == 2){ %>
+                                            <h5><i style="color:orange" class="fa fa-star"></i>
+                                                <i style="color:orange" class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i></h5>
+                                            <% }else if (review.score == 1.5){ %>
+                                            <h5><i style="color:orange" class="fa fa-star"></i>
+                                                <i style="color: orange" class="fa fa-star-half"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i></h5>
+                                            <% }else if (review.score == 1){ %>
+                                            <h5><i style="color:orange" class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i></h5>
+                                            <% }else if (review.score == 0.5){ %>
+                                            <h5><i style="color:orange" class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i></h5>
+                                            <% }else{ %>
+                                            <h5><i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i></h5>
+                                            <% } %>
+                                       
+                                        </div>
                                 </div>
-                        </div>
-                    </div>
-                
-                </div>
-                   
-                <% }) %>
-
-
-            </div>
-
-            <!-- <div class="testi_slider owl-carousel">
-                <% for(var i =0; i < recommendations.length; i++){%>
-
-
-                <div class="item">
-
-                    <div class="testi_item ">
-                        <div class=" media">
-                            <div class="d-flex " style="width:125px ;height:100px">
-                                <img style="max-width:90%;max-height: 90%; border-radius: 50%;"
-                                    src=<%= recommendations[i].userImage %> alt="userImage">
                             </div>
-                            <div class="media-body">
-                                <p><%= recommendations[i].text %></p>
-                                <h4><%= recommendations[i].userName %></h4>
-                                <% if (recommendations[i].score == 5){ %>
-                                <h5><i style="color:orange" class="fa fa-star"></i>
-                                    <i style="color:orange" class="fa fa-star"></i>
-                                    <i style="color:orange" class="fa fa-star"></i>
-                                    <i style="color:orange" class="fa fa-star"></i>
-                                    <i style="color:orange" class="fa fa-star"></i></h5>
-                                <% }else if (recommendations[i].score == 4.5){ %>
-                                <h5><i style="color:orange" class="fa fa-star"></i>
-                                    <i style="color:orange" class="fa fa-star"></i>
-                                    <i style="color:orange" class="fa fa-star"></i>
-                                    <i style="color:orange" class="fa fa-star"></i>
-                                    <i style="color: orange" class="fa fa-star-half"></i></h5>
-                                <% } else if (recommendations[i].score == 4){ %>
-                                <h5><i style="color:orange" class="fa fa-star"></i>
-                                    <i style="color:orange" class="fa fa-star"></i>
-                                    <i style="color:orange" class="fa fa-star"></i>
-                                    <i style="color:orange" class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i></h5>
-                                <% }else if (recommendations[i].score == 3.5){ %>
-                                <h5><i style="color:orange" class="fa fa-star"></i>
-                                    <i style="color:orange" class="fa fa-star"></i>
-                                    <i style="color:orange" class="fa fa-star"></i>
-                                    <i style="color: orange" class="fa fa-star-half"></i>
-                                    <i class="fa fa-star"></i></h5>
-                                <% }else if (recommendations[i].score == 3){ %>
-                                <h5><i style="color:orange" class="fa fa-star"></i>
-                                    <i style="color:orange" class="fa fa-star"></i>
-                                    <i style="color:orange" class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i></h5>
-                                <% }else if (recommendations[i].score == 2.5){ %>
-                                <h5><i style="color:orange" class="fa fa-star"></i>
-                                    <i style="color:orange" class="fa fa-star"></i>
-                                    <i style="color: orange" class="fa fa-star-half"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i></h5>
-                                <% }else if (recommendations[i].score == 2){ %>
-                                <h5><i style="color:orange" class="fa fa-star"></i>
-                                    <i style="color:orange" class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i></h5>
-                                <% }else if (recommendations[i].score == 1.5){ %>
-                                <h5><i style="color:orange" class="fa fa-star"></i>
-                                    <i style="color: orange" class="fa fa-star-half"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i></h5>
-                                <% }else if (recommendations[i].score == 1){ %>
-                                <h5><i style="color:orange" class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i></h5>
-                                <% }else if (recommendations[i].score == 0.5){ %>
-                                <h5><i style="color:orange" class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i></h5>
-                                <% }else{ %>
-                                <h5><i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i></h5>
-                                <% } %>
-                                </div>
+                        
                         </div>
-                    </div>
-                
-                </div>
-                   
+                           
+                        <% }) %>
+                <% } else { %>
+                    <div class="item">
+        				<div class="testi_item">
+							<div class="media">
+								<div class="d-flex" style="width: 125px;height: 100px;">
+									<img src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/bakodu.png?alt=media&token=7b586a8d-5b0a-4cb8-b652-dfb9cc7482b1" style="max-height: 90%; max-width: 90%; border-radius: 50%;" alt="">
+								</div>
+								<div class="media-body">
+									<p >Perfect app for my neck posture.</p>
+									<h4>Babatunde Akodu</h4>
+									<h5>Babatunde Akodu</h5>
+								</div>
+							</div>
+        				</div>
+        			</div>
+                    <div class="item">
+        				<div class="testi_item">
+							<div class="media">
+								<div class="d-flex" style="width: 125px;height: 100px;">
+									<img src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/rakodu.png?alt=media&token=96f665e8-ea7b-48c3-8f1f-329ca40a631f" style="max-height: 90%; max-width: 90%; border-radius: 50%;" alt="">
+								</div>
+								<div class="media-body">
+									<p >Excellent and effective.</p>
+									<h4>Rahman Akodu</h4>
+									<h5>Rahman Akodu</h5>
+								</div>
+							</div>
+        				</div>
+        			</div>
+                    <div class="item">
+        				<div class="testi_item">
+							<div class="media">
+								<div class="d-flex" style="width: 125px;height: 100px;">
+									<img src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/mogundero.jpg?alt=media&token=03709695-6a51-4f51-8a1d-14f565b890ad" style="max-height: 90%; max-width: 90%; border-radius: 50%;" alt="">
+								</div>
+								<div class="media-body">
+									<p >I have used it and to large extent kept me conscious of my neck posture.</p>
+									<h4>Micheal Ogundero</h4>
+									<h5>Micheal Ogundero</h5>
+								</div>
+							</div>
+        				</div>
+        			</div>
+                    <div class="item">
+        				<div class="testi_item">
+							<div class="media">
+								<div class="d-flex" style="width: 125px;height: 100px;">
+									<img src="https://firebasestorage.googleapis.com/v0/b/cervitech-e4465.appspot.com/o/yosibemekun.jpg?alt=media&token=0cedf5eb-c3d7-42db-a9c0-498ac3055cde" style="max-height: 90%; max-width: 90%; border-radius: 50%;" alt="">
+								</div>
+								<div class="media-body">
+									<p >Good experience on this app, I love it here.</p>
+									<h4>Yosioluwa Osibemekun</h4>
+									<h5>Yosioluwa Osibemekun</h5>
+								</div>
+							</div>
+        				</div>
+        			</div>
                 <% } %>
+              
 
 
             </div>
-                             -->
+
+
 
 
         </div>

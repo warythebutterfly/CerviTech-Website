@@ -26,7 +26,7 @@ try{
 		num:10
 
 	});
-	//console.log(app);
+	console.log(app);
 	console.log(reviews);
 
 
@@ -47,6 +47,8 @@ try{
 		res.render('index', {
 			
 			title: "CerviTech",
+			recommendations : null
+			
 	
 		});
 	}
