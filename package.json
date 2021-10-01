@@ -26,7 +26,7 @@
     "google-play-scraper": "^8.0.4",
     "include": "^1.1.0",
     "jquery": "^3.5.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "nodemailer": "^6.4.10",
     "routes": "^2.1.0",
     "sweetalert": "^2.1.2",
