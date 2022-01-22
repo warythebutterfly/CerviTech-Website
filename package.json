@@ -17,24 +17,25 @@
   "dependencies": {
     "ajax": "0.0.4",
     "babel-install": "^2.1.0",
-    "body-parser": "^1.19.0",
-    "cookie-parser": "^1.4.4",
-    "dotenv": "^8.2.0",
-    "ejs": "^3.1.3",
-    "express": "^4.17.1",
+    "body-parser": "^1.19.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^8.6.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
     "express-async-await": "^1.1.0",
-    "google-play-scraper": "^8.0.4",
+    "google-play-scraper": "^8.1.0",
     "include": "^1.1.0",
-    "jquery": "^3.5.1",
-    "node-fetch": "^2.6.0",
-    "nodemailer": "^6.4.10",
+    "jquery": "^3.6.0",
+    "node-cron": "^3.0.0",
+    "node-fetch": "^2.6.7",
+    "nodemailer": "^6.7.2",
     "routes": "^2.1.0",
     "sweetalert": "^2.1.2",
-    "sweetalert2": "^9.15.2"
+    "sweetalert2": "^9.17.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4",
-    "yargs": "^15.3.1"
+    "nodemon": "^2.0.15",
+    "yargs": "^15.4.1"
   },
   "repository": {
     "type": "git",
