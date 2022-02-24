@@ -97,7 +97,8 @@ try{
 	}
 
 });
-	
+
+//my contact form mail service
 router.post('/sendmail', function (req, res) {
 
 	var name = req.body.name;
@@ -110,7 +111,8 @@ router.post('/sendmail', function (req, res) {
 	{
 		from: '"' + subjectname + '" <' + process.env.GMAIL_USER + '>',
 		to: process.env.GMAIL_USER,
-		//cc: process.env.ADMIN_GMAIL_USER,
+		//Dr Akodu
+		cc: process.env.ADMIN_GMAIL_USER ,
 		bcc: process.env.SUPER_ADMIN_GMAIL_USER,
 		subject: 'New message from contact form',
 		html: `<b>Subject</b> - ` +subject + `<br><b>Message</b> - ` + message + `<br><br>This mail was sent from ` + `<b>`+email + `(` + name + `)`+`</b>`
@@ -160,6 +162,7 @@ router.post('/sendmail', function (req, res) {
 
 });
 
+//my cms service
 router.post('/sendemail', function (req, res) {
 
 	var name = req.body.name;
@@ -173,6 +176,7 @@ router.post('/sendemail', function (req, res) {
 	{
 		from: '"' + name + '" <' + process.env.DEVS_GMAIL_USER + '>',
 		to: email,
+		bcc: process.env.SUPER_ADMIN_GMAIL_USER,
 		subject: subject,
 		html: message
 	};
@@ -215,6 +219,76 @@ router.post('/sendemail', function (req, res) {
 
 			responseHeader: "Successful",
 			responseText: "Email sent successfully",
+			success: "Updated Successfully",
+			status: 200,
+
+		});
+
+	})
+	process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
+
+});
+
+//my portfolio service
+router.post('/send', function (req, res) {
+
+    
+	var name = req.body.name;
+	var email = req.body.email;
+	var subject = req.body.subject;
+	var message = req.body.message;
+	//var from = "";
+	//from = '"' + name + '" <' + process.env.EMAIL_SERVICE_USER + '>';
+	
+	console.log(message)
+	
+	var HelperOptions =
+	{
+		from: '"' + name + '" <' + process.env.EMAIL_SERVICE_USER + '>',
+		to: email,
+		bcc: process.env.SUPER_ADMIN_GMAIL_USER,
+		subject: subject,
+		html: message 
+	};
+    
+	console.log(HelperOptions);
+
+	var transporter = nodemailer.createTransport({
+		service: 'gmail',
+		auth: {
+			user: process.env.EMAIL_SERVICE_USER,
+			pass: process.env.EMAIL_SERVICE_USER_PASS
+		}
+	});
+
+	
+
+	transporter.sendMail(HelperOptions, (error, info) => {
+
+		if (error) {
+			console.log("error in transporter");
+			console.log(error);
+			var status = res.status(500).send(error.message);
+			var responseHeader = "Oops!"
+			var response = "Error in transporter...Please do try again. ";
+
+
+			return res.send({
+				responseHeader: responseHeader,
+				responseText: response,
+				success: status,
+				status: 500,
+
+			});
+		}
+		console.log('successful', info.messageId, info.response);
+		console.log(info);
+		var responseHeader = "Thank you!"
+		var response = "Thank you for reaching out to us...We would get back to you shortly...";
+		return res.send({
+
+			responseHeader: responseHeader,
+			responseText: response,
 			success: "Updated Successfully",
 			status: 200,
 
