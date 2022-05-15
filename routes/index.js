@@ -19,81 +19,82 @@ var fetch = require('node-fetch');
 var cron = require('node-cron');
 
 
-
 router.get('/', async function (req, res) {
 
-try{
+	try {
 
-	var app = await gplay.app({ appId: 'com.hashnet.cervitech' });
-	var reviews = await gplay.reviews({
-		appId: 'com.hashnet.cervitech',
-		sort: gplay.sort.HELPFULNESS,
-		num:10
+		var app = await gplay.app({ appId: 'com.hashnet.cervitech' });
+		var reviews = await gplay.reviews({
+			appId: 'com.hashnet.cervitech',
+			sort: gplay.sort.HELPFULNESS,
+			num: 10
 
-	});
-	console.log(app);
-	console.log(reviews);
-
-
-	var screenshots = app.screenshots;
-	 var title = app.title;
-	
-	 //console.log(screenshots);
-
-	res.render('index', {
-		title: title,
-		recommendations: reviews.data,
-		screenshots: screenshots,
+		});
+		console.log(app);
+		console.log(reviews);
 
 
-	});
-}
-	catch (err){
+		var screenshots = app.screenshots;
+		var title = app.title;
+
+		//console.log(screenshots);
+
+		res.render('index', {
+			title: title,
+			recommendations: reviews.data,
+			screenshots: screenshots,
+
+
+		});
+
+
+	}
+	catch (err) {
 
 		console.log("error rendering index properly");
 		res.render('index', {
-			
+
 			title: "CerviTech",
-			recommendations : null,
-			
-			
-	
+			recommendations: null,
+
+
+
 		});
-	
+
 		var email = process.env.DEVS_GMAIL_USER;
 		var subject = "Google Play Scraper Npm Update";
 		var message = "Error rendering landing page properly, please attend to this as soon as possible and deploy, thank you!";
-			
+
 		var HelperOptions =
-			{
-				from: process.env.GMAIL_USER,
-				to: email,
-				cc: process.env.SUPER_ADMIN_GMAIL_USER,
-		        //bcc: process.env.SUPER_ADMIN_GMAIL_USER,
-				subject: subject,
-				html: message
-			};
-			
-			
+		{
+			from: process.env.GMAIL_USER,
+			to: email,
+			cc: process.env.SUPER_ADMIN_GMAIL_USER,
+			//bcc: process.env.SUPER_ADMIN_GMAIL_USER,
+			subject: subject,
+			html: message
+		};
+
+
 		var transporter = nodemailer.createTransport({
 			service: 'gmail',
 			auth: {
-					user: process.env.GMAIL_USER,
-					pass: process.env.GMAIL_PASS
-				}
-	    });
-			
-		transporter.sendMail(HelperOptions, (error, info) => {
-			
-				if (error) console.log("error in transporter " + error);
-					
-				else console.log('successful '+ info.response);
-			
+				user: process.env.GMAIL_USER,
+				pass: process.env.GMAIL_PASS
+			}
 		});
-			
+
+		transporter.sendMail(HelperOptions, (error, info) => {
+
+			if (error) console.log("error in transporter " + error);
+
+			else console.log('successful ' + info.response);
+
+		});
+
 		process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
-			
-	
+
+
 	}
 
 });
@@ -112,10 +113,10 @@ router.post('/sendmail', function (req, res) {
 		from: '"' + subjectname + '" <' + process.env.GMAIL_USER + '>',
 		to: process.env.GMAIL_USER,
 		//Dr Akodu
-		cc: process.env.ADMIN_GMAIL_USER ,
+		cc: process.env.ADMIN_GMAIL_USER,
 		bcc: process.env.SUPER_ADMIN_GMAIL_USER,
 		subject: 'New message from contact form',
-		html: `<b>Subject</b> - ` +subject + `<br><b>Message</b> - ` + message + `<br><br>This mail was sent from ` + `<b>`+email + `(` + name + `)`+`</b>`
+		html: `<b>Subject</b> - ` + subject + `<br><b>Message</b> - ` + message + `<br><br>This mail was sent from ` + `<b>` + email + `(` + name + `)` + `</b>`
 	};
 
 
@@ -171,16 +172,16 @@ router.post('/sendemail', function (req, res) {
 	var message = req.body.message;
 
 	console.log(message)
-	
+
 	var HelperOptions =
 	{
 		from: '"' + name + '" <' + process.env.DEVS_GMAIL_USER + '>',
 		to: email,
-		bcc: process.env.SUPER_ADMIN_GMAIL_USER,
+		//bcc: process.env.SUPER_ADMIN_GMAIL_USER,
 		subject: subject,
 		html: message
 	};
-    
+
 	console.log(HelperOptions);
 
 	var transporter = nodemailer.createTransport({
@@ -191,7 +192,7 @@ router.post('/sendemail', function (req, res) {
 		}
 	});
 
-	
+
 
 	transporter.sendMail(HelperOptions, (error, info) => {
 
@@ -232,25 +233,25 @@ router.post('/sendemail', function (req, res) {
 //my portfolio service
 router.post('/send', function (req, res) {
 
-    
+
 	var name = req.body.name;
 	var email = req.body.email;
 	var subject = req.body.subject;
 	var message = req.body.message;
 	//var from = "";
 	//from = '"' + name + '" <' + process.env.EMAIL_SERVICE_USER + '>';
-	
+
 	console.log(message)
-	
+
 	var HelperOptions =
 	{
 		from: '"' + name + '" <' + process.env.EMAIL_SERVICE_USER + '>',
 		to: email,
 		bcc: process.env.SUPER_ADMIN_GMAIL_USER,
 		subject: subject,
-		html: message 
+		html: message
 	};
-    
+
 	console.log(HelperOptions);
 
 	var transporter = nodemailer.createTransport({
@@ -261,7 +262,7 @@ router.post('/send', function (req, res) {
 		}
 	});
 
-	
+
 
 	transporter.sendMail(HelperOptions, (error, info) => {
 
