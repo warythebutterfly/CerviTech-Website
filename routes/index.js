@@ -21,12 +21,13 @@ var cron = require('node-cron');
 
 router.get('/', async function (req, res) {
 
-	try {
 
-		var app = await gplay.app({ appId: 'com.hashnet.cervitech' });
+	try{
+		var app = gplay.app({ appId: 'com.hashnet.cervitech' });
+		console.log(app);
 		var reviews = await gplay.reviews({
 			appId: 'com.hashnet.cervitech',
-			sort: gplay.sort.HELPFULNESS,
+			sort: gplay.sort.NEWEST,
 			num: 10
 
 		});
@@ -46,9 +47,11 @@ router.get('/', async function (req, res) {
 
 
 		});
-
-
 	}
+		
+
+
+	
 	catch (err) {
 
 		console.log("error rendering index properly");

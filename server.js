@@ -61,23 +61,23 @@ var transporter2 = nodemailer.createTransport({
 	}
 });
 
-var MailOptions3 =
-{
-	from: process.env.EMAIL_SERVICE_USER,
-	to: process.env.SUPER_ADMIN_GMAIL_USER,
-	//cc: process.env.SUPER_ADMIN_GMAIL_USER,
-	//bcc: process.env.SUPER_ADMIN_GMAIL_USER,
-	subject: "My Portfolio Mail Service Working",
-	html: "This is a daily mail. If you got this mail today, it means the contact form for my portfolio mail service is working. :)"
-};
+// var MailOptions3 =
+// {
+// 	from: process.env.EMAIL_SERVICE_USER,
+// 	to: process.env.SUPER_ADMIN_GMAIL_USER,
+// 	//cc: process.env.SUPER_ADMIN_GMAIL_USER,
+// 	//bcc: process.env.SUPER_ADMIN_GMAIL_USER,
+// 	subject: "My Portfolio Mail Service Working",
+// 	html: "This is a daily mail. If you got this mail today, it means the contact form for my portfolio mail service is working. :)"
+// };
 
-var transporter3 = nodemailer.createTransport({
-	service: 'gmail',
-	auth: {
-		user: process.env.EMAIL_SERVICE_USER,
-		pass: process.env.EMAIL_SERVICE_USER_PASS
-	}
-});
+// var transporter3 = nodemailer.createTransport({
+// 	service: 'gmail',
+// 	auth: {
+// 		user: process.env.EMAIL_SERVICE_USER,
+// 		pass: process.env.EMAIL_SERVICE_USER_PASS
+// 	}
+// });
 
 cron.schedule('0 7 * * *', () => {
 	console.log("i reached here");
@@ -97,13 +97,13 @@ cron.schedule('0 7 * * *', () => {
 
 	});
 
-	transporter3.sendMail(MailOptions3, (error, info) => {
+	// transporter3.sendMail(MailOptions3, (error, info) => {
 
-		if (error) console.log("error in transporter " + error);
+	// 	if (error) console.log("error in transporter " + error);
 
-		else console.log('successful ' + info.response);
+	// 	else console.log('successful ' + info.response);
 
-	});
+	// });
 });
 
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
