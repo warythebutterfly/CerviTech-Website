@@ -17,11 +17,11 @@
   "dependencies": {
     "ajax": "0.0.4",
     "babel-install": "^2.1.0",
-    "body-parser": "^1.19.1",
+    "body-parser": "^1.20.1",
     "cookie-parser": "^1.4.6",
     "dotenv": "^8.6.0",
     "ejs": "^3.1.6",
-    "express": "^4.17.2",
+    "express": "^4.18.2",
     "express-async-await": "^1.1.0",
     "google-play-scraper": "^8.1.0",
     "include": "^1.1.0",
