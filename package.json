@@ -10,7 +10,9 @@
   "scripts": {
     "start": "nodemon --inspect=0.0.0.0 server.js",
     "start:prod": "node server.js",
-    "build": "webpack",
+    "webpack" : "webpack",
+    "dev": "npm run webpack -- --mode development --watch",
+    "build": "npm run webpack",
     "heroku-prebuild": "npm install --dev",
     "heroku buildpacks": "add --index 1 heroku/nodejs"
   },
