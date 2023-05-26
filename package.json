@@ -10,7 +10,8 @@
   "scripts": {
     "start": "nodemon --inspect=0.0.0.0 server.js",
     "start:prod": "node server.js",
-    "build": "webpack"
+    "build": "webpack",
+    "heroku-prebuild": "npm install --dev"
   },
   "author": "Toyosi",
   "license": "ISC",
