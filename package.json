@@ -12,11 +12,12 @@
     "start:prod": "node server.js",
     "build": "webpack",
     "heroku-prebuild": "npm install --dev",
-    "heroku buildpacks":"add --index 1 heroku/nodejs"
+    "heroku buildpacks": "add --index 1 heroku/nodejs"
   },
   "author": "Toyosi",
   "license": "ISC",
   "dependencies": {
+    "@rails/webpacker": "^5.4.4",
     "ajax": "0.0.4",
     "babel-install": "^2.1.0",
     "body-parser": "^1.19.1",
