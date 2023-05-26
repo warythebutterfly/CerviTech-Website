@@ -23,27 +23,28 @@ router.get('/', async function (req, res) {
 
 
 	try{
-		var app = gplay.app({ appId: 'com.hashnet.cervitech' });
-		console.log(app);
-		var reviews = await gplay.reviews({
-			appId: 'com.hashnet.cervitech',
-			sort: gplay.sort.NEWEST,
-			num: 10
 
-		});
-		console.log(app);
-		console.log(reviews);
+		// var app = gplay.app({ appId: 'com.hashnet.cervitech' });
+		// console.log(app);
+		// var reviews = await gplay.reviews({
+		// 	appId: 'com.hashnet.cervitech',
+		// 	sort: gplay.sort.NEWEST,
+		// 	num: 10
+
+		// });
+		// console.log(app);
+		// console.log(reviews);
 
 
-		var screenshots = app.screenshots;
-		var title = app.title;
+		// var screenshots = app.screenshots;
+		// var title = app.title;
 
 		//console.log(screenshots);
 
 		res.render('index', {
-			title: title,
-			recommendations: reviews.data,
-			screenshots: screenshots,
+			title: "CerviTech",
+			recommendations: [],//reviews.data,
+			screenshots: [],
 
 
 		});
