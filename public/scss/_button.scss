@@ -2,7 +2,7 @@
 ============================================================================================ */
 .main_btn{
 	padding: 0px 45px;
-    background-image: linear-gradient(to right, #bc2bff 0%, #7249fb 51%, #bc2bff 100%);
+    background-image: linear-gradient(to right, #2C0C56 0%, #7249fb 51%, #2C0C56 100%);
     background-size: 200% auto;
     z-index: 2;
     display: inline-block;
@@ -47,7 +47,7 @@
 .submit_btn{
 	width: auto;
 	display: inline-block;
-	background-image: linear-gradient(to right, #bc2bff 0%, #7249fb 51%, #bc2bff 100%);
+	background-color: linear-gradient(to right, #2C0C56 0%, #7249fb 51%, #2C0C56 100%) !important;
     background-size: 200% auto;
 	padding: 0px 50px;
 	color: #fff;

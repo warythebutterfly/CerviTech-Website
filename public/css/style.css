@@ -288,9 +288,9 @@ button:focus {
 }
 
 .header_area .navbar .nav .nav-item.submenu ul .nav-item:hover .nav-link {
-  background-image: -moz-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -webkit-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -ms-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
+  background-image: -moz-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -webkit-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -ms-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
   color: #fff;
 }
 
@@ -328,9 +328,9 @@ button:focus {
   top: -70px;
   left: 0;
   right: 0;
-  background-image: -moz-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -webkit-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -ms-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
+  background-image: -moz-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -webkit-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -ms-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
   -webkit-transform: translateY(70px);
   -ms-transform: translateY(70px);
   transform: translateY(70px);
@@ -390,7 +390,10 @@ button:focus {
 ============================================================================================ */
 .home_banner_area {
   z-index: 1;
-  background: url(../img/banner/home-banner.jpg) no-repeat scroll center center;
+  /* background: url(../img/banner/home-banner.jpg) no-repeat scroll center center; */
+  background-image: -moz-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -webkit-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -ms-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
   background-size: cover;
 }
 
@@ -605,16 +608,16 @@ button:focus {
 }
 
 .l_news_item:hover .date {
-  background-image: -moz-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -webkit-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -ms-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
+  background-image: -moz-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -webkit-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -ms-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
   color: #fff;
   border-color: #f9f9ff;
 }
 
 .l_news_item:hover h4 {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #bc2bff), color-stop(0.15, #bc2bff), color-stop(0.3, #7249fb), color-stop(0.45, #7249fb), color-stop(0.6, #7249fb), color-stop(0.75, #7249fb), color-stop(0.9, #7249fb), color-stop(1, #7249fb));
-  background-image: gradient(linear, left top, right top, color-stop(0, #bc2bff), color-stop(0.15, #bc2bff), color-stop(0.3, #7249fb), color-stop(0.45, #7249fb), color-stop(0.6, #7249fb), color-stop(0.75, #7249fb), color-stop(0.9, #7249fb), color-stop(1, #7249fb));
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #2C0C56), color-stop(0.15, #2C0C56), color-stop(0.3, #7249fb), color-stop(0.45, #7249fb), color-stop(0.6, #7249fb), color-stop(0.75, #7249fb), color-stop(0.9, #7249fb), color-stop(1, #7249fb));
+  background-image: gradient(linear, left top, right top, color-stop(0, #2C0C56), color-stop(0.15, #2C0C56), color-stop(0.3, #7249fb), color-stop(0.45, #7249fb), color-stop(0.6, #7249fb), color-stop(0.75, #7249fb), color-stop(0.9, #7249fb), color-stop(1, #7249fb));
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -954,9 +957,9 @@ button:focus {
 .blog_right_sidebar .widget_title {
   font-size: 18px;
   line-height: 25px;
-  background-image: -moz-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -webkit-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -ms-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
+  background-image: -moz-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -webkit-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -ms-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
   text-align: center;
   color: #fff;
   padding: 8px 0px;
@@ -973,9 +976,9 @@ button:focus {
   padding-left: 20px;
   border-radius: 45px;
   z-index: 0;
-  background-image: -moz-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -webkit-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -ms-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
+  background-image: -moz-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -webkit-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -ms-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
 }
 
 .blog_right_sidebar .search_widget .input-group .form-control.placeholder {
@@ -1170,9 +1173,9 @@ button:focus {
 }
 
 .blog_right_sidebar .newsletter_widget .bbtns {
-  background-image: -moz-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -webkit-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -ms-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
+  background-image: -moz-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -webkit-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -ms-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
   color: #fff;
   font-size: 12px;
   line-height: 38px;
@@ -2182,7 +2185,7 @@ button:focus {
 }
 
 b, sup, sub, u, del {
-  color: #f8b600;
+  color: #2C0C56;
 }
 
 h1 {
@@ -2313,25 +2316,25 @@ h6 {
 
 .genric-btn.primary {
   color: #fff;
-  background: #f8b600;
+  background: #2C0C56;
   border: 1px solid transparent;
 }
 
 .genric-btn.primary:hover {
-  color: #f8b600;
-  border: 1px solid #f8b600;
+  color: #2C0C56;
+  border: 1px solid #2C0C56;
   background: #fff;
 }
 
 .genric-btn.primary-border {
-  color: #f8b600;
-  border: 1px solid #f8b600;
+  color: #2C0C56;
+  border: 1px solid #2C0C56;
   background: #fff;
 }
 
 .genric-btn.primary-border:hover {
   color: #fff;
-  background: #f8b600;
+  background: #2C0C56;
   border: 1px solid transparent;
 }
 
@@ -2467,7 +2470,7 @@ h6 {
 .generic-blockquote {
   padding: 30px 50px 30px 30px;
   background: #fff;
-  border-left: 2px solid #f8b600;
+  border-left: 2px solid #2C0C56;
 }
 
 @media (max-width: 991px) {
@@ -2609,7 +2612,7 @@ h6 {
   position: absolute;
   width: 14px;
   height: 14px;
-  border: 3px solid #f8b600;
+  border: 3px solid #2C0C56;
   background: #fff;
   top: 4px;
   left: 0;
@@ -2622,7 +2625,7 @@ h6 {
 
 .ordered-list li {
   list-style-type: decimal-leading-zero;
-  color: #f8b600;
+  color: #2C0C56;
   font-weight: 500;
   line-height: 1.82em !important;
 }
@@ -2635,7 +2638,7 @@ h6 {
 .ordered-list-alpha li {
   margin-left: 30px;
   list-style-type: lower-alpha;
-  color: #f8b600;
+  color: #2C0C56;
   font-weight: 500;
   line-height: 1.82em !important;
 }
@@ -2648,7 +2651,7 @@ h6 {
 .ordered-list-roman li {
   margin-left: 30px;
   list-style-type: lower-roman;
-  color: #f8b600;
+  color: #2C0C56;
   font-weight: 500;
   line-height: 1.82em !important;
 }
@@ -2720,7 +2723,7 @@ h6 {
 
 .single-input-primary:focus {
   outline: none;
-  border: 1px solid #f8b600;
+  border: 1px solid #2C0C56;
 }
 
 .single-input-accent {
@@ -2781,7 +2784,7 @@ h6 {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #f8b600;
+  background: #2C0C56;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
@@ -2870,7 +2873,7 @@ h6 {
 }
 
 .primary-switch input:checked + label:before {
-  background: #f8b600;
+  background: #2C0C56;
 }
 
 .confirm-switch {
@@ -3236,12 +3239,12 @@ h6 {
 }
 
 .default-select .nice-select .list .option.selected {
-  color: #f8b600;
+  color: #2C0C56;
   background: transparent;
 }
 
 .default-select .nice-select .list .option:hover {
-  color: #f8b600;
+  color: #2C0C56;
   background: transparent;
 }
 
@@ -3302,12 +3305,12 @@ h6 {
 }
 
 .form-select .nice-select .list .option.selected {
-  color: #f8b600;
+  color: #2C0C56;
   background: transparent;
 }
 
 .form-select .nice-select .list .option:hover {
-  color: #f8b600;
+  color: #2C0C56;
   background: transparent;
 }
 
@@ -3326,10 +3329,10 @@ h6 {
 ============================================================================================ */
 .main_btn {
   padding: 0px 45px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#bc2bff), color-stop(51%, #7249fb), to(#bc2bff));
-  background-image: -webkit-linear-gradient(left, #bc2bff 0%, #7249fb 51%, #bc2bff 100%);
-  background-image: -o-linear-gradient(left, #bc2bff 0%, #7249fb 51%, #bc2bff 100%);
-  background-image: linear-gradient(to right, #bc2bff 0%, #7249fb 51%, #bc2bff 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#2C0C56), color-stop(51%, #7249fb), to(#2C0C56));
+  background-image: -webkit-linear-gradient(left, #2C0C56 0%, #7249fb 51%, #2C0C56 100%);
+  background-image: -o-linear-gradient(left, #2C0C56 0%, #7249fb 51%, #2C0C56 100%);
+  background-image: linear-gradient(to right, #2C0C56 0%, #7249fb 51%, #2C0C56 100%);
   background-size: 200% auto;
   z-index: 2;
   display: inline-block;
@@ -3374,9 +3377,9 @@ h6 {
 }
 
 .main_btn2:hover {
-  background-image: -moz-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -webkit-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -ms-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
+  background-image: -moz-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -webkit-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -ms-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
   -webkit-box-shadow: 0px 10px 30px 0px rgba(115, 73, 251, 0.3);
   box-shadow: 0px 10px 30px 0px rgba(115, 73, 251, 0.3);
   color: #fff;
@@ -3385,10 +3388,10 @@ h6 {
 .submit_btn {
   width: auto;
   display: inline-block;
-  background-image: -webkit-gradient(linear, left top, right top, from(#bc2bff), color-stop(51%, #7249fb), to(#bc2bff));
-  background-image: -webkit-linear-gradient(left, #bc2bff 0%, #7249fb 51%, #bc2bff 100%);
-  background-image: -o-linear-gradient(left, #bc2bff 0%, #7249fb 51%, #bc2bff 100%);
-  background-image: linear-gradient(to right, #bc2bff 0%, #7249fb 51%, #bc2bff 100%);
+  background-color: -webkit-gradient(linear, left top, right top, from(#2C0C56), color-stop(51%, #7249fb), to(#2C0C56))!important;
+  background-color: -webkit-linear-gradient(left, #2C0C56 0%, #7249fb 51%, #2C0C56 100%)!important;
+  background-color: -o-linear-gradient(left, #2C0C56 0%, #7249fb 51%, #2C0C56 100%)!important;
+  background-color: linear-gradient(to right, #2C0C56 0%, #7249fb 51%, #2C0C56 100%)!important;
   background-size: 200% auto;
   padding: 0px 50px;
   color: #fff;
@@ -3493,9 +3496,9 @@ h6 {
 }
 
 .blog_btn:hover {
-  background-image: -moz-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -webkit-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -ms-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
+  background-image: -moz-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -webkit-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -ms-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
   border-color: #fff;
   color: #fff;
 }
@@ -3510,7 +3513,7 @@ h6 {
   -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.08);
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.08);
   padding: 50px 30px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .feature_item img {
@@ -3567,9 +3570,9 @@ h6 {
 /* Download App Area css
 ============================================================================================ */
 .download_app_area {
-  background-image: -moz-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -webkit-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -ms-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
+  background-image: -moz-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -webkit-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -ms-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
 }
 
 .app_inner {
@@ -3605,12 +3608,12 @@ h6 {
 
 .app_btn_area .app_btn:hover {
   background: #fff;
-  -webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.1);
+  /* -webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.1); */
+  /* box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.1); */
 }
 
 .app_btn_area .app_btn:hover .media .d-flex i {
-  background: -webkit-linear-gradient(left, #bb2bff, #7349fb);
+  background-color: -webkit-linear-gradient(left, #bb2bff, #7349fb);
   background: -webkit-gradient(linear, left top, right top, from(#bb2bff), to(#7349fb));
   background: -o-linear-gradient(left, #bb2bff, #7349fb);
   background: linear-gradient(left, #bb2bff, #7349fb);
@@ -3900,8 +3903,8 @@ h6 {
 }
 
 .testi_item:hover .media .media-body h4 {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #bc2bff), color-stop(0.15, #bc2bff), color-stop(0.3, #7249fb), color-stop(0.45, #7249fb), color-stop(0.6, #7249fb), color-stop(0.75, #7249fb), color-stop(0.9, #7249fb), color-stop(1, #7249fb));
-  background-image: gradient(linear, left top, right top, color-stop(0, #bc2bff), color-stop(0.15, #bc2bff), color-stop(0.3, #7249fb), color-stop(0.45, #7249fb), color-stop(0.6, #7249fb), color-stop(0.75, #7249fb), color-stop(0.9, #7249fb), color-stop(1, #7249fb));
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #2C0C56), color-stop(0.15, #2C0C56), color-stop(0.3, #7249fb), color-stop(0.45, #7249fb), color-stop(0.6, #7249fb), color-stop(0.75, #7249fb), color-stop(0.9, #7249fb), color-stop(1, #7249fb));
+  background-image: gradient(linear, left top, right top, color-stop(0, #2C0C56), color-stop(0.15, #2C0C56), color-stop(0.3, #7249fb), color-stop(0.45, #7249fb), color-stop(0.6, #7249fb), color-stop(0.75, #7249fb), color-stop(0.9, #7249fb), color-stop(1, #7249fb));
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -3972,9 +3975,9 @@ h6 {
 }
 
 .single-footer-widget .sub-btn {
-  background-image: -moz-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -webkit-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
-  background-image: -ms-linear-gradient(0deg, #bc2bff 0%, #7249fb 100%);
+  background-image: -moz-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -webkit-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
+  background-image: -ms-linear-gradient(0deg, #2C0C56 0%, #7249fb 100%);
   color: #fff;
   font-weight: 500;
   line-height: 38px;
